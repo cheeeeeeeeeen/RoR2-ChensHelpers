@@ -1,0 +1,255 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ChensHelpers</name>
+    </assembly>
+    <members>
+        <member name="T:Chen.Helpers.CollectionHelpers.Extensions">
+            <summary>
+            Useful extensions that relate to collection data structures.
+            </summary>
+        </member>
+        <member name="M:Chen.Helpers.CollectionHelpers.Extensions.ConditionalAdd``1(System.Collections.Generic.List{``0},``0,System.Func{``0,``0,System.Boolean})">
+            <summary>
+            Adds an item into the list if the condition is met.
+            This is just a combination for Add and Exists.
+            </summary>
+            <typeparam name="T">Type of the items in the list</typeparam>
+            <param name="list">The list in question</param>
+            <param name="value">The value to add into the list</param>
+            <param name="condition">The condition check (itemFromTheList, valueToAdd)</param>
+            <returns>True if the item is added. False if the item already exists.</returns>
+        </member>
+        <member name="M:Chen.Helpers.CollectionHelpers.Extensions.Contains``1(``0[],``0)">
+            <summary>
+            Checks if a value exists within the array.
+            </summary>
+            <typeparam name="T">Data type of the array</typeparam>
+            <param name="array">The array to inspect</param>
+            <param name="value">The value to check</param>
+            <returns>True if the value exists in the array. False if not.</returns>
+        </member>
+        <member name="T:Chen.Helpers.GeneralHelpers.AssetsManager">
+            <summary>
+            A helper class that handles registering bundles for use in a mod.
+            </summary>
+        </member>
+        <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.#ctor">
+            <summary>
+            The default constructor one may use to add bundles later.
+            </summary>
+        </member>
+        <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.#ctor(Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo[])">
+            <summary>
+            Constructor to use if the bundles are already made.
+            </summary>
+            <param name="bundles">Group of bundles for the helper class to manage</param>
+        </member>
+        <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.Add(Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo)">
+            <summary>
+            Used to add a bundle for the manager to handle.
+            </summary>
+            <param name="bundle">A bundle data</param>
+            <returns>True if the bundle is added. False if the bundle already exists or has the same name.</returns>
+        </member>
+        <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.Add(System.String,System.String,Chen.Helpers.GeneralHelpers.AssetsManager.BundleType)">
+            <summary>
+            Used to add a bundle for the manager to handle.
+            This is an overload alternative.
+            </summary>
+            <param name="modPrefix">Prefix to use for the bundle</param>
+            <param name="source">Embedded resource path of the bundle</param>
+            <param name="type">Bundle Type</param>
+            <returns>True if the bundle is added. False if the bundle already exists or has the same name.</returns>
+        </member>
+        <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.RegisterAll">
+            <summary>
+            Invoke this method to start registering all bundles assigned to this manager.
+            </summary>
+        </member>
+        <member name="T:Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo">
+            <summary>
+            A data structure that holds the information about the bundle.
+            This data structure is used by the AssetManager.
+            </summary>
+        </member>
+        <member name="F:Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.modPrefix">
+            <summary>
+            The mod prefix is defined to be the identifier to the bundle for accessing. It should always start with "@".
+            </summary>
+        </member>
+        <member name="F:Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.source">
+            <summary>
+            The source is the resource path as defined by a mod. The bundle must be Embedded as Resource.
+            </summary>
+        </member>
+        <member name="F:Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.type">
+            <summary>
+            Type of the bundle.
+            </summary>
+        </member>
+        <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.#ctor(System.String,System.String,Chen.Helpers.GeneralHelpers.AssetsManager.BundleType)">
+            <summary>
+            
+            </summary>
+            <param name="modPrefix"></param>
+            <param name="source"></param>
+            <param name="type"></param>
+        </member>
+        <member name="T:Chen.Helpers.GeneralHelpers.AssetsManager.BundleType">
+            <summary>
+            This is used to identify the type of the bundle for differentiation in registration process.
+            </summary>
+        </member>
+        <member name="F:Chen.Helpers.GeneralHelpers.AssetsManager.BundleType.UnityAssetBundle">
+            <summary>
+            This Bundle Type refers to the asset bundles generated in Unity through AssetBundleBrowser.
+            </summary>
+        </member>
+        <member name="F:Chen.Helpers.GeneralHelpers.AssetsManager.BundleType.WWiseSoundBank">
+            <summary>
+            This Bundle Type refers to the sound bank generated by WWise.
+            </summary>
+        </member>
+        <member name="T:Chen.Helpers.GeneralHelpers.MultiplayerTest">
+            <summary>
+            A helper that can enable and disable Multiplayer Testing. Be sure to not enable this in Awake of a mod on release.
+            </summary>
+        </member>
+        <member name="M:Chen.Helpers.GeneralHelpers.MultiplayerTest.Enable(BepInEx.Logging.ManualLogSource,System.String)">
+            <summary>
+            Enables Multiplayer Testing so that the mod creator can connect using two instances of the game.
+            </summary>
+            <param name="logger">BepInEx logger instance</param>
+            <param name="message">Message to display when Multiplayer Testing is enabled</param>
+        </member>
+        <member name="M:Chen.Helpers.GeneralHelpers.MultiplayerTest.Enable(Chen.Helpers.LogHelpers.Log,System.String)">
+            <summary>
+            Enables Multiplayer Testing so that the mod creator can connect using two instances of the game.
+            </summary>
+            <param name="logger">LogHelpers.Log instance</param>
+            <param name="message">Message to display when Multiplayer Testing is enabled</param>
+        </member>
+        <member name="M:Chen.Helpers.GeneralHelpers.MultiplayerTest.Disable(BepInEx.Logging.ManualLogSource,System.String)">
+            <summary>
+            Disables Multiplayer Testing.
+            </summary>
+            <param name="logger">BepInEx logger instance</param>
+            <param name="message">Message to display when Multiplayer Testing is disabled</param>
+        </member>
+        <member name="M:Chen.Helpers.GeneralHelpers.MultiplayerTest.Disable(Chen.Helpers.LogHelpers.Log,System.String)">
+            <summary>
+            Disables Multiplayer Testing.
+            </summary>
+            <param name="logger">LogHelpers.Log instance</param>
+            <param name="message">Message to display when Multiplayer Testing is disabled</param>
+        </member>
+        <member name="T:Chen.Helpers.HelperPlugin">
+            <summary>
+            The mother plugin so that it can be depended on. It does nothing by itself, though.
+            </summary>
+        </member>
+        <member name="F:Chen.Helpers.HelperPlugin.ModVer">
+            <summary>
+            Mod version of the plugin. Useful for fetching the version dynamically when depending on it.
+            </summary>
+        </member>
+        <member name="F:Chen.Helpers.HelperPlugin.ModName">
+            <summary>
+            Mod name of the plugin.
+            </summary>
+        </member>
+        <member name="F:Chen.Helpers.HelperPlugin.ModGuid">
+            <summary>
+            Mod GUID of the plugin. Useful for referencing this GUID of this mod without the need to look it up.
+            </summary>
+        </member>
+        <member name="T:Chen.Helpers.LogHelpers.Log">
+            <summary>
+            Helper class for logging.
+            Its purpose is really to shorten the code when invoking it so that typing it would be fast and short.
+            </summary>
+        </member>
+        <member name="M:Chen.Helpers.LogHelpers.Log.#ctor(BepInEx.Logging.ManualLogSource)">
+            <summary>
+            Constructor for the Log helper. Always assign this to a variable with an internal access modifier to keep it to the calling assembly's scope.
+            </summary>
+            <param name="logger">BepInEx Logger object</param>
+        </member>
+        <member name="M:Chen.Helpers.LogHelpers.Log.Debug(System.Object)">
+            <summary>
+            Log using the Debug format of BepInEx logger.
+            </summary>
+            <param name="data">Anything</param>
+        </member>
+        <member name="M:Chen.Helpers.LogHelpers.Log.Error(System.Object)">
+            <summary>
+            Log using the Error format of BepInEx logger.
+            </summary>
+            <param name="data">Anything</param>
+        </member>
+        <member name="M:Chen.Helpers.LogHelpers.Log.Info(System.Object)">
+            <summary>
+            Log using the Info format of BepInEx logger.
+            </summary>
+            <param name="data">Anything</param>
+        </member>
+        <member name="M:Chen.Helpers.LogHelpers.Log.Message(System.Object)">
+            <summary>
+            Log using the Message format of BepInEx logger.
+            </summary>
+            <param name="data">Anything</param>
+        </member>
+        <member name="M:Chen.Helpers.LogHelpers.Log.Warning(System.Object)">
+            <summary>
+            Log using the Warning format of BepInEx logger.
+            </summary>
+            <param name="data">Anything</param>
+        </member>
+        <member name="M:Chen.Helpers.LogHelpers.Log.Array(System.Object[],System.String)">
+            <summary>
+            Log an array of data with the Message format.
+            </summary>
+            <param name="data"></param>
+            <param name="prefix"></param>
+        </member>
+        <member name="T:Chen.Helpers.UnityHelpers.Extensions">
+            <summary>
+            Extensions for Unity objects.
+            </summary>
+        </member>
+        <member name="M:Chen.Helpers.UnityHelpers.Extensions.GetOrAddComponent``1(UnityEngine.GameObject)">
+            <summary>
+            An extension that allows fetching or adding a component.
+            If the GameObject has the component, it will only fetch it and return the component.
+            If the GameObject does not have the component, it will add one to it and return the component.
+            </summary>
+            <typeparam name="T">A Unity Component</typeparam>
+            <param name="gameObject">The GameObject to fetch from or add to</param>
+            <returns>The component specified as T</returns>
+        </member>
+        <member name="M:Chen.Helpers.UnityHelpers.Extensions.GetOrAddComponent``1(UnityEngine.GameObject,System.Action{``0})">
+            <summary>
+            An extension that allows fetching or adding a component.
+            This overload contains post-processing logic of the component.
+            Only used for cleaner code. Otherwise it is equivalent to assigning values after this method call.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="gameObject"></param>
+            <param name="action"></param>
+            <returns>The component specified as T</returns>
+        </member>
+        <member name="M:Chen.Helpers.UnityHelpers.Extensions.GetOrAddComponent``1(UnityEngine.GameObject,System.Action{``0},System.Action{``0})">
+            <summary>
+            An extension that allows fetching or adding a component.
+            This overload contains post-processing logic of the component depending whether it was created or fetched.
+            Only used for advanced logic without having to do an if-else statement after the method call.
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="gameObject"></param>
+            <param name="getAction"></param>
+            <param name="addAction"></param>
+            <returns>The component specified as T</returns>
+        </member>
+    </members>
+</doc>

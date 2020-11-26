@@ -1,0 +1,10 @@
+{
+  "name": "ChensHelpers",
+  "version_number": "1.0.0",
+  "website_url": "https://github.com/cheeeeeeeeeen/RoR2-ChensHelpers",
+  "description": "This mod includes helpers that may aid other mod creators.",
+  "dependencies": [
+    "bbepis-BepInExPack-5.3.1",
+    "tristanmcpherson-R2API-2.5.14"
+  ]
+}
