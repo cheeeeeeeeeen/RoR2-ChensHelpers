@@ -11,6 +11,8 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>true</Optimize>
     <DocumentationFile>C:\Users\Chen\Documents\Visual Studio 2019\Risk of Rain 2\RoR2-ChensHelpers\docs\ChensHelpers.xml</DocumentationFile>
+    <DefaultDocumentationWikiLinks>true</DefaultDocumentationWikiLinks>
+    <DefaultDocumentationFileNameMode>Md5</DefaultDocumentationFileNameMode>
   </PropertyGroup>
 
   <ItemGroup>

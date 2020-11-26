@@ -34,12 +34,14 @@
             A helper class that handles registering bundles for use in a mod.
             </summary>
         </member>
-        <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.#ctor">
+        <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.
+ctor">
             <summary>
             The default constructor one may use to add bundles later.
             </summary>
         </member>
-        <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.#ctor(Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo[])">
+        <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.
+ctor(Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo[])">
             <summary>
             Constructor to use if the bundles are already made.
             </summary>
@@ -88,7 +90,8 @@
             Type of the bundle.
             </summary>
         </member>
-        <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.#ctor(System.String,System.String,Chen.Helpers.GeneralHelpers.AssetsManager.BundleType)">
+        <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.
+ctor(System.String,System.String,Chen.Helpers.GeneralHelpers.AssetsManager.BundleType)">
             <summary>
             
             </summary>
@@ -170,7 +173,8 @@
             Its purpose is really to shorten the code when invoking it so that typing it would be fast and short.
             </summary>
         </member>
-        <member name="M:Chen.Helpers.LogHelpers.Log.#ctor(BepInEx.Logging.ManualLogSource)">
+        <member name="M:Chen.Helpers.LogHelpers.Log.
+ctor(BepInEx.Logging.ManualLogSource)">
             <summary>
             Constructor for the Log helper. Always assign this to a variable with an internal access modifier to keep it to the calling assembly's scope.
             </summary>
