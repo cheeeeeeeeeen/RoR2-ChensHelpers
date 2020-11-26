@@ -11,6 +11,9 @@ public class AssetsManager.BundleInfo
 ```
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; AssetsManager.BundleInfo  
 
+### Constructors
+- [BundleInfo(string, string, Chen.Helpers.GeneralHelpers.AssetsManager.BundleType)](./Bsn6KEzjYG3DkZjx+cL52g 'Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.BundleInfo(string, string, Chen.Helpers.GeneralHelpers.AssetsManager.BundleType)')
+
 ### Fields
 - [modPrefix](./0l7x7YUW45FSPJUu155aTQ 'Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.modPrefix')
 - [source](./SsCxWOT-P5NGdkE6Up-NGg 'Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.source')

@@ -11,8 +11,11 @@ public class Log
 ```
 Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; Log  
 
+### Constructors
+- [Log(BepInEx.Logging.ManualLogSource)](./ZF9b0564KZvfP5rM4TDytw 'Chen.Helpers.LogHelpers.Log.Log(BepInEx.Logging.ManualLogSource)')
+
 ### Methods
-- [Array(object[], string)](./XV1P1UB0yMPlV2prPRqXtw 'Chen.Helpers.LogHelpers.Log.Array(object[], string)')
+- [Array&lt;T&gt;(T[], string)](./yB-NZo2Epo58rliAQ-uitg 'Chen.Helpers.LogHelpers.Log.Array&lt;T&gt;(T[], string)')
 - [Debug(object)](./Vb3x8TpE8obFhSKIbncaoA 'Chen.Helpers.LogHelpers.Log.Debug(object)')
 - [Error(object)](./1ONFxusmA9af3ahIpOrWRg 'Chen.Helpers.LogHelpers.Log.Error(object)')
 - [Info(object)](./flNi66wvScfP4VkXkWF8lg 'Chen.Helpers.LogHelpers.Log.Info(object)')
