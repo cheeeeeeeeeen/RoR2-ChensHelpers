@@ -62,7 +62,7 @@ namespace Chen.Helpers.GeneralHelpers
         {
             foreach (BundleInfo bundleInfo in bundleInfos)
             {
-                using (var stream = Assembly.GetExecutingAssembly().GetManifestResourceStream(bundleInfo.source))
+                using (var stream = Assembly.GetCallingAssembly().GetManifestResourceStream(bundleInfo.source))
                 {
                     switch (bundleInfo.type)
                     {
@@ -102,11 +102,11 @@ namespace Chen.Helpers.GeneralHelpers
             public BundleType type;
 
             /// <summary>
-            /// 
+            /// Constructor used to build BundleInfo.
             /// </summary>
-            /// <param name="modPrefix"></param>
-            /// <param name="source"></param>
-            /// <param name="type"></param>
+            /// <param name="modPrefix">The prefix used to access the bundle</param>
+            /// <param name="source">The resource path of the bundle</param>
+            /// <param name="type">Type of the bundle</param>
             public BundleInfo(string modPrefix, string source, BundleType type)
             {
                 this.modPrefix = modPrefix;

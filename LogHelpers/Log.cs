@@ -50,11 +50,12 @@ namespace Chen.Helpers.LogHelpers
         public void Warning(object data) => logger.LogWarning(data);
 
         /// <summary>
-        /// Log an array of data with the Message format.
+        /// Log an array of values using Message format.
         /// </summary>
-        /// <param name="data"></param>
-        /// <param name="prefix"></param>
-        public void Array(object[] data, string prefix = "")
+        /// <typeparam name="T">Type of the array</typeparam>
+        /// <param name="data">Array of T</param>
+        /// <param name="prefix">Prefix to be inserted before the data</param>
+        public void Array<T>(T[] data, string prefix = "")
         {
             foreach (var datum in data)
             {
