@@ -8,6 +8,8 @@ A Risk of Rain 2 library of helpers that may aid other mod creators. This is mai
 
 Just download the package from Thunderstore and add the DLL files as project reference. Move the DLL files accordingly first before adding reference.
 
+Documentation can be found in **[GitHub Pages](https://cheeeeeeeeeen.github.io/RoR2-ChensHelpers/)**.
+
 ## Contact
 - Issue Page: https://github.com/cheeeeeeeeeen/RoR2-ChensTemplate/issues
 - Email: `blancfaye7@gmail.com`
