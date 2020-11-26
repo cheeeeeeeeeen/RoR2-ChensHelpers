@@ -1,4 +1,4 @@
-#### [ChensHelpers](./index.md 'index')
+#### [ChensHelpers](./index 'index')
 ## Chen.Helpers.CollectionHelpers Namespace
 ### Classes
-- [Extensions](./Chen-Helpers-CollectionHelpers-Extensions.md 'Chen.Helpers.CollectionHelpers.Extensions')
+- [Extensions](./Chen-Helpers-CollectionHelpers-Extensions 'Chen.Helpers.CollectionHelpers.Extensions')

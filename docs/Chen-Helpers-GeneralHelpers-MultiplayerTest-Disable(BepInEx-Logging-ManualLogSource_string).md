@@ -1,5 +1,5 @@
-#### [ChensHelpers](./index.md 'index')
-### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers.md 'Chen.Helpers.GeneralHelpers').[MultiplayerTest](./Chen-Helpers-GeneralHelpers-MultiplayerTest.md 'Chen.Helpers.GeneralHelpers.MultiplayerTest')
+#### [ChensHelpers](./index 'index')
+### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers 'Chen.Helpers.GeneralHelpers').[MultiplayerTest](./Chen-Helpers-GeneralHelpers-MultiplayerTest 'Chen.Helpers.GeneralHelpers.MultiplayerTest')
 ## MultiplayerTest.Disable(BepInEx.Logging.ManualLogSource, string) Method
 Disables Multiplayer Testing.  
 ```csharp

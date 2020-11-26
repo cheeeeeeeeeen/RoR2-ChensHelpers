@@ -1,5 +1,5 @@
-#### [ChensHelpers](./index.md 'index')
-### [Chen.Helpers.CollectionHelpers](./Chen-Helpers-CollectionHelpers.md 'Chen.Helpers.CollectionHelpers').[Extensions](./Chen-Helpers-CollectionHelpers-Extensions.md 'Chen.Helpers.CollectionHelpers.Extensions')
+#### [ChensHelpers](./index 'index')
+### [Chen.Helpers.CollectionHelpers](./Chen-Helpers-CollectionHelpers 'Chen.Helpers.CollectionHelpers').[Extensions](./Chen-Helpers-CollectionHelpers-Extensions 'Chen.Helpers.CollectionHelpers.Extensions')
 ## Extensions.Contains&lt;T&gt;(T[], T) Method
 Checks if a value exists within the array.  
 ```csharp

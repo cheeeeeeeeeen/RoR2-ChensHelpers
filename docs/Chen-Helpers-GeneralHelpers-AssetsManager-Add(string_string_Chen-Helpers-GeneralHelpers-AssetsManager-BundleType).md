@@ -1,5 +1,5 @@
-#### [ChensHelpers](./index.md 'index')
-### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers.md 'Chen.Helpers.GeneralHelpers').[AssetsManager](./Chen-Helpers-GeneralHelpers-AssetsManager.md 'Chen.Helpers.GeneralHelpers.AssetsManager')
+#### [ChensHelpers](./index 'index')
+### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers 'Chen.Helpers.GeneralHelpers').[AssetsManager](./Chen-Helpers-GeneralHelpers-AssetsManager 'Chen.Helpers.GeneralHelpers.AssetsManager')
 ## AssetsManager.Add(string, string, Chen.Helpers.GeneralHelpers.AssetsManager.BundleType) Method
 Used to add a bundle for the manager to handle.  
 This is an overload alternative.  
@@ -16,7 +16,7 @@ Prefix to use for the bundle
 Embedded resource path of the bundle  
   
 <a name='Chen-Helpers-GeneralHelpers-AssetsManager-Add(string_string_Chen-Helpers-GeneralHelpers-AssetsManager-BundleType)-type'></a>
-`type` [AssetsManager.BundleType](./Chen-Helpers-GeneralHelpers-AssetsManager-BundleType.md 'Chen.Helpers.GeneralHelpers.AssetsManager.BundleType')  
+`type` [AssetsManager.BundleType](./Chen-Helpers-GeneralHelpers-AssetsManager-BundleType 'Chen.Helpers.GeneralHelpers.AssetsManager.BundleType')  
 Bundle Type  
   
 #### Returns

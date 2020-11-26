@@ -1,5 +1,5 @@
-#### [ChensHelpers](./index.md 'index')
-### [Chen.Helpers](./Chen-Helpers.md 'Chen.Helpers').[HelperPlugin](./Chen-Helpers-HelperPlugin.md 'Chen.Helpers.HelperPlugin')
+#### [ChensHelpers](./index 'index')
+### [Chen.Helpers](./Chen-Helpers 'Chen.Helpers').[HelperPlugin](./Chen-Helpers-HelperPlugin 'Chen.Helpers.HelperPlugin')
 ## HelperPlugin.ModGuid Field
 Mod GUID of the plugin. Useful for referencing this GUID of this mod without the need to look it up.  
 ```csharp

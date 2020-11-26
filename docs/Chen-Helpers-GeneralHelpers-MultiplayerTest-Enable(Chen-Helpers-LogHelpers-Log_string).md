@@ -1,5 +1,5 @@
-#### [ChensHelpers](./index.md 'index')
-### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers.md 'Chen.Helpers.GeneralHelpers').[MultiplayerTest](./Chen-Helpers-GeneralHelpers-MultiplayerTest.md 'Chen.Helpers.GeneralHelpers.MultiplayerTest')
+#### [ChensHelpers](./index 'index')
+### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers 'Chen.Helpers.GeneralHelpers').[MultiplayerTest](./Chen-Helpers-GeneralHelpers-MultiplayerTest 'Chen.Helpers.GeneralHelpers.MultiplayerTest')
 ## MultiplayerTest.Enable(Chen.Helpers.LogHelpers.Log, string) Method
 Enables Multiplayer Testing so that the mod creator can connect using two instances of the game.  
 ```csharp
@@ -7,7 +7,7 @@ public static void Enable(Chen.Helpers.LogHelpers.Log logger, string message="Mu
 ```
 #### Parameters
 <a name='Chen-Helpers-GeneralHelpers-MultiplayerTest-Enable(Chen-Helpers-LogHelpers-Log_string)-logger'></a>
-`logger` [Log](./Chen-Helpers-LogHelpers-Log.md 'Chen.Helpers.LogHelpers.Log')  
+`logger` [Log](./Chen-Helpers-LogHelpers-Log 'Chen.Helpers.LogHelpers.Log')  
 LogHelpers.Log instance  
   
 <a name='Chen-Helpers-GeneralHelpers-MultiplayerTest-Enable(Chen-Helpers-LogHelpers-Log_string)-message'></a>

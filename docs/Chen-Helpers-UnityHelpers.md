@@ -1,4 +1,4 @@
-#### [ChensHelpers](./index.md 'index')
+#### [ChensHelpers](./index 'index')
 ## Chen.Helpers.UnityHelpers Namespace
 ### Classes
-- [Extensions](./Chen-Helpers-UnityHelpers-Extensions.md 'Chen.Helpers.UnityHelpers.Extensions')
+- [Extensions](./Chen-Helpers-UnityHelpers-Extensions 'Chen.Helpers.UnityHelpers.Extensions')

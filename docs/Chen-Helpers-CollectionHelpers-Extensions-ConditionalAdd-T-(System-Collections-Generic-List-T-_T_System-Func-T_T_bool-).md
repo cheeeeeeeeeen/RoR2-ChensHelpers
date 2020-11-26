@@ -1,5 +1,5 @@
-#### [ChensHelpers](./index.md 'index')
-### [Chen.Helpers.CollectionHelpers](./Chen-Helpers-CollectionHelpers.md 'Chen.Helpers.CollectionHelpers').[Extensions](./Chen-Helpers-CollectionHelpers-Extensions.md 'Chen.Helpers.CollectionHelpers.Extensions')
+#### [ChensHelpers](./index 'index')
+### [Chen.Helpers.CollectionHelpers](./Chen-Helpers-CollectionHelpers 'Chen.Helpers.CollectionHelpers').[Extensions](./Chen-Helpers-CollectionHelpers-Extensions 'Chen.Helpers.CollectionHelpers.Extensions')
 ## Extensions.ConditionalAdd&lt;T&gt;(System.Collections.Generic.List&lt;T&gt;, T, System.Func&lt;T,T,bool&gt;) Method
 Adds an item into the list if the condition is met.  
 This is just a combination for Add and Exists.  

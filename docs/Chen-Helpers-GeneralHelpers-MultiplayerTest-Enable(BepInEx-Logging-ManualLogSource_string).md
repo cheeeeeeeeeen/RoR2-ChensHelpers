@@ -1,5 +1,5 @@
-#### [ChensHelpers](./index.md 'index')
-### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers.md 'Chen.Helpers.GeneralHelpers').[MultiplayerTest](./Chen-Helpers-GeneralHelpers-MultiplayerTest.md 'Chen.Helpers.GeneralHelpers.MultiplayerTest')
+#### [ChensHelpers](./index 'index')
+### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers 'Chen.Helpers.GeneralHelpers').[MultiplayerTest](./Chen-Helpers-GeneralHelpers-MultiplayerTest 'Chen.Helpers.GeneralHelpers.MultiplayerTest')
 ## MultiplayerTest.Enable(BepInEx.Logging.ManualLogSource, string) Method
 Enables Multiplayer Testing so that the mod creator can connect using two instances of the game.  
 ```csharp

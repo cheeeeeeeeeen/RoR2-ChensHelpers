@@ -1,5 +1,5 @@
-#### [ChensHelpers](./index.md 'index')
-### [Chen.Helpers.LogHelpers](./Chen-Helpers-LogHelpers.md 'Chen.Helpers.LogHelpers').[Log](./Chen-Helpers-LogHelpers-Log.md 'Chen.Helpers.LogHelpers.Log')
+#### [ChensHelpers](./index 'index')
+### [Chen.Helpers.LogHelpers](./Chen-Helpers-LogHelpers 'Chen.Helpers.LogHelpers').[Log](./Chen-Helpers-LogHelpers-Log 'Chen.Helpers.LogHelpers.Log')
 ## Log.Error(object) Method
 Log using the Error format of BepInEx logger.  
 ```csharp

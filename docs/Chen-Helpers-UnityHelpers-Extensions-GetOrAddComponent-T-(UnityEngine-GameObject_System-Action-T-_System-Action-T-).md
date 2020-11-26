@@ -1,5 +1,5 @@
-#### [ChensHelpers](./index.md 'index')
-### [Chen.Helpers.UnityHelpers](./Chen-Helpers-UnityHelpers.md 'Chen.Helpers.UnityHelpers').[Extensions](./Chen-Helpers-UnityHelpers-Extensions.md 'Chen.Helpers.UnityHelpers.Extensions')
+#### [ChensHelpers](./index 'index')
+### [Chen.Helpers.UnityHelpers](./Chen-Helpers-UnityHelpers 'Chen.Helpers.UnityHelpers').[Extensions](./Chen-Helpers-UnityHelpers-Extensions 'Chen.Helpers.UnityHelpers.Extensions')
 ## Extensions.GetOrAddComponent&lt;T&gt;(UnityEngine.GameObject, System.Action&lt;T&gt;, System.Action&lt;T&gt;) Method
 An extension that allows fetching or adding a component.  
 This overload contains post-processing logic of the component depending whether it was created or fetched.  

@@ -1,5 +1,5 @@
-#### [ChensHelpers](./index.md 'index')
-### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers.md 'Chen.Helpers.GeneralHelpers').[AssetsManager](./Chen-Helpers-GeneralHelpers-AssetsManager.md 'Chen.Helpers.GeneralHelpers.AssetsManager')
+#### [ChensHelpers](./index 'index')
+### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers 'Chen.Helpers.GeneralHelpers').[AssetsManager](./Chen-Helpers-GeneralHelpers-AssetsManager 'Chen.Helpers.GeneralHelpers.AssetsManager')
 ## AssetsManager.BundleType Enum
 This is used to identify the type of the bundle for differentiation in registration process.  
 ```csharp

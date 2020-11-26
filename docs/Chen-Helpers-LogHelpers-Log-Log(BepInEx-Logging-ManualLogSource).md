@@ -1,5 +1,5 @@
-#### [ChensHelpers](./index.md 'index')
-### [Chen.Helpers.LogHelpers](./Chen-Helpers-LogHelpers.md 'Chen.Helpers.LogHelpers').[Log](./Chen-Helpers-LogHelpers-Log.md 'Chen.Helpers.LogHelpers.Log')
+#### [ChensHelpers](./index 'index')
+### [Chen.Helpers.LogHelpers](./Chen-Helpers-LogHelpers 'Chen.Helpers.LogHelpers').[Log](./Chen-Helpers-LogHelpers-Log 'Chen.Helpers.LogHelpers.Log')
 ## Log(BepInEx.Logging.ManualLogSource) Constructor
 Constructor for the Log helper. Always assign this to a variable with an internal access modifier to keep it to the calling assembly's scope.  
 ```csharp
