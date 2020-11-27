@@ -9,13 +9,13 @@ namespace Chen.Helpers.CollectionHelpers
     public static class Extensions
     {
         /// <summary>
-        /// Adds an item into the list if the condition is met.
+        /// Adds an item into the list if the condition is not met.
         /// This is just a combination for Add and Exists.
         /// </summary>
         /// <typeparam name="T">Type of the items in the list</typeparam>
         /// <param name="list">The list in question</param>
         /// <param name="value">The value to add into the list</param>
-        /// <param name="condition">The condition check where T is the item from the list</param>
+        /// <param name="condition">The existence condition check where T is the item from the list</param>
         /// <returns>True if the item is added. False if the item already exists.</returns>
         public static bool ConditionalAdd<T>(this List<T> list, T value, Func<T, bool> condition) 
         {

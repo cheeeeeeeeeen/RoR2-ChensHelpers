@@ -4,7 +4,7 @@
 ### [Chen.Helpers.CollectionHelpers](./DwHbUVbrAWB47BrJd2O1Ng 'Chen.Helpers.CollectionHelpers').[Extensions](./SY98pRtkb05-xncR8ottww 'Chen.Helpers.CollectionHelpers.Extensions')
 
 ## Extensions.ConditionalAdd&lt;T&gt;(System.Collections.Generic.List&lt;T&gt;, T, System.Func&lt;T,bool&gt;) Method
-Adds an item into the list if the condition is met.  
+Adds an item into the list if the condition is not met.  
 This is just a combination for Add and Exists.  
 ```csharp
 public static bool ConditionalAdd<T>(this System.Collections.Generic.List<T> list, T value, System.Func<T,bool> condition);
@@ -27,7 +27,7 @@ The value to add into the list
   
 <a name='siGFT6mi6EmXZbpu4qya6g'></a>
 `condition` [System.Func&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[T](#CLVUBkckycRKNYk4P440BQ 'Chen.Helpers.CollectionHelpers.Extensions.ConditionalAdd&lt;T&gt;(System.Collections.Generic.List&lt;T&gt;, T, System.Func&lt;T,bool&gt;).T')[,](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')[System.Boolean](https://docs.microsoft.com/en-us/dotnet/api/System.Boolean 'System.Boolean')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.Func-2 'System.Func`2')  
-The condition check where T is the item from the list  
+The existence condition check where T is the item from the list  
   
 
 #### Returns

@@ -11,13 +11,13 @@
         </member>
         <member name="M:Chen.Helpers.CollectionHelpers.Extensions.ConditionalAdd``1(System.Collections.Generic.List{``0},``0,System.Func{``0,System.Boolean})">
             <summary>
-            Adds an item into the list if the condition is met.
+            Adds an item into the list if the condition is not met.
             This is just a combination for Add and Exists.
             </summary>
             <typeparam name="T">Type of the items in the list</typeparam>
             <param name="list">The list in question</param>
             <param name="value">The value to add into the list</param>
-            <param name="condition">The condition check where T is the item from the list</param>
+            <param name="condition">The existence condition check where T is the item from the list</param>
             <returns>True if the item is added. False if the item already exists.</returns>
         </member>
         <member name="M:Chen.Helpers.CollectionHelpers.Extensions.ConditionalRemove``1(System.Collections.Generic.List{``0},``0)">
