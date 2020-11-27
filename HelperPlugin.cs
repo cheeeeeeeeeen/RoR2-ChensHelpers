@@ -1,7 +1,9 @@
 ﻿using BepInEx;
 using Chen.Helpers.LogHelpers;
 using R2API;
+using R2API.Networking;
 using R2API.Utils;
+using static Chen.Helpers.GeneralHelpers.MinionExtensions;
 
 namespace Chen.Helpers
 {
@@ -11,7 +13,7 @@ namespace Chen.Helpers
     [BepInPlugin(ModGuid, ModName, ModVer)]
     [BepInDependency(R2API.R2API.PluginGUID, R2API.R2API.PluginVersion)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
-    [R2APISubmoduleDependency(nameof(ResourcesAPI), nameof(SoundAPI))]
+    [R2APISubmoduleDependency(nameof(ResourcesAPI), nameof(SoundAPI), nameof(NetworkingAPI))]
     public class HelperPlugin : BaseUnityPlugin
     {
         /// <summary>
@@ -32,6 +34,8 @@ namespace Chen.Helpers
         private void Awake()
         {
             Log = new Log(Logger);
+
+            NetworkingAPI.RegisterMessageType<SyncOwner>();
         }
     }
 }
