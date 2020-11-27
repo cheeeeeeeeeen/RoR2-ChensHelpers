@@ -8,6 +8,7 @@ namespace Chen.Helpers.GeneralHelpers
 {
     /// <summary>
     /// A helper class that handles registering bundles for use in a mod.
+    /// Keep an instance of this class internal or local to the mod.
     /// </summary>
     public class AssetsManager
     {
@@ -84,9 +85,9 @@ namespace Chen.Helpers.GeneralHelpers
 
         /// <summary>
         /// A data structure that holds the information about the bundle.
-        /// This data structure is used by the AssetManager.
+        /// This is used by the AssetsManager.
         /// </summary>
-        public class BundleInfo
+        public struct BundleInfo
         {
             /// <summary>
             /// The mod prefix is defined to be the identifier to the bundle for accessing. It should always start with "@".
