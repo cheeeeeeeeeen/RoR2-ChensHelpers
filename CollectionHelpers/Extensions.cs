@@ -15,11 +15,11 @@ namespace Chen.Helpers.CollectionHelpers
         /// <typeparam name="T">Type of the items in the list</typeparam>
         /// <param name="list">The list in question</param>
         /// <param name="value">The value to add into the list</param>
-        /// <param name="condition">The condition check (itemFromTheList, valueToAdd)</param>
+        /// <param name="condition">The condition check where T is the item from the list</param>
         /// <returns>True if the item is added. False if the item already exists.</returns>
-        public static bool ConditionalAdd<T>(this List<T> list, T value, Func<T, T, bool> condition) 
+        public static bool ConditionalAdd<T>(this List<T> list, T value, Func<T, bool> condition) 
         {
-            if (list.Exists(item => condition(item, value))) return false;
+            if (list.Exists(item => condition(item))) return false;
             list.Add(value);
             return true;
         }

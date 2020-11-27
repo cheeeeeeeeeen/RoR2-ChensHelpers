@@ -37,7 +37,7 @@ namespace Chen.Helpers.GeneralHelpers
         /// <returns>True if the bundle is added. False if the bundle already exists or has the same name.</returns>
         public bool Add(BundleInfo bundle)
         {
-            return bundleInfos.ConditionalAdd(bundle, (listItem, bundleItem) =>
+            return bundleInfos.ConditionalAdd(bundle, (listItem) =>
                 listItem.modPrefix == bundle.modPrefix
                 && listItem.source == bundle.source
             );
