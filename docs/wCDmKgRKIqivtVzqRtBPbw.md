@@ -3,13 +3,12 @@
 
 ### [Chen.Helpers.GeneralHelpers](./ETEQ0RLckShPNesJc2reiw 'Chen.Helpers.GeneralHelpers').[AssetsManager](./A0AsbIQQ4FDaS87xdtpw-A 'Chen.Helpers.GeneralHelpers.AssetsManager')
 
-## AssetsManager.BundleInfo Class
+## AssetsManager.BundleInfo Struct
 A data structure that holds the information about the bundle.  
-This data structure is used by the AssetManager.  
+This is used by the AssetsManager.  
 ```csharp
-public class AssetsManager.BundleInfo
+public struct AssetsManager.BundleInfo
 ```
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; AssetsManager.BundleInfo  
 
 ### Constructors
 - [BundleInfo(string, string, Chen.Helpers.GeneralHelpers.AssetsManager.BundleType)](./Bsn6KEzjYG3DkZjx+cL52g 'Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.BundleInfo(string, string, Chen.Helpers.GeneralHelpers.AssetsManager.BundleType)')

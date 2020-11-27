@@ -32,6 +32,7 @@
         <member name="T:Chen.Helpers.GeneralHelpers.AssetsManager">
             <summary>
             A helper class that handles registering bundles for use in a mod.
+            Keep an instance of this class internal or local to the mod.
             </summary>
         </member>
         <member name="M:Chen.Helpers.GeneralHelpers.AssetsManager.#ctor">
@@ -70,7 +71,7 @@
         <member name="T:Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo">
             <summary>
             A data structure that holds the information about the bundle.
-            This data structure is used by the AssetManager.
+            This is used by the AssetsManager.
             </summary>
         </member>
         <member name="F:Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.modPrefix">
@@ -140,6 +141,18 @@
             <typeparam name="T">Component to match</typeparam>
             <param name="owner">Master of the minions</param>
             <returns>List of components of the minions</returns>
+        </member>
+        <member name="M:Chen.Helpers.GeneralHelpers.MinionExtensions.AssignOwner(RoR2.CharacterMaster,RoR2.CharacterMaster,System.Boolean,System.Boolean)">
+            <summary>
+            Assigns a new owner to the minion. This needs to be called on both the Server and the Client.
+            If transmit is true, it only needs to be called on the server.
+            The queuing system provides a way to ensure that all clients will sync the owner. This is a slow process though.
+            Only set useQueue to true if the client cannot see the objects and returns a warning of the object being null.
+            </summary>
+            <param name="minion">Minion to set a new owner with</param>
+            <param name="newOwner">New owner of the minion</param>
+            <param name="transmit">Determines whether the server would send a sync message to other clients</param>
+            <param name="useQueue">Tells the client to use a queuing system if transmit is true</param>
         </member>
         <member name="T:Chen.Helpers.GeneralHelpers.MultiplayerTest">
             <summary>
@@ -243,6 +256,69 @@
             <typeparam name="T">Type of the array</typeparam>
             <param name="data">Array of T</param>
             <param name="prefix">Prefix to be inserted before the data</param>
+        </member>
+        <member name="T:Chen.Helpers.MathHelpers.Wave">
+            <summary>
+            Math helper for easily computing Wave behaviors.
+            </summary>
+        </member>
+        <member name="M:Chen.Helpers.MathHelpers.Wave.Sine(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Computes for a Sine Wave. Always multiply this to the original value.
+            </summary>
+            <param name="phase">Offset from time</param>
+            <param name="frequency">Number of complete cycles in a given time</param>
+            <param name="amplitude">Maximum and minimum values</param>
+            <param name="baseValue">Offset from the result</param>
+            <returns>The computed value for the wave</returns>
+        </member>
+        <member name="M:Chen.Helpers.MathHelpers.Wave.Triangle(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Computes for a Triangle Wave. Always multiply this to the original value.
+            </summary>
+            <param name="phase">Offset from time</param>
+            <param name="frequency">Number of complete cycles in a given time</param>
+            <param name="amplitude">Maximum and minimum values</param>
+            <param name="baseValue">Offset from the result</param>
+            <returns>The computed value for the wave</returns>
+        </member>
+        <member name="M:Chen.Helpers.MathHelpers.Wave.Square(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Computes for a Square Wave. Always multiply this to the original value.
+            </summary>
+            <param name="phase">Offset from time</param>
+            <param name="frequency">Number of complete cycles in a given time</param>
+            <param name="amplitude">Maximum and minimum values</param>
+            <param name="baseValue">Offset from the result</param>
+            <returns>The computed value for the wave</returns>
+        </member>
+        <member name="M:Chen.Helpers.MathHelpers.Wave.Sawtooth(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Computes for a Sawtooth Wave. Always multiply this to the original value.
+            </summary>
+            <param name="phase">Offset from time</param>
+            <param name="frequency">Number of complete cycles in a given time</param>
+            <param name="amplitude">Maximum and minimum values</param>
+            <param name="baseValue">Offset from the result</param>
+            <returns>The computed value for the wave</returns>
+        </member>
+        <member name="M:Chen.Helpers.MathHelpers.Wave.InvertedSawtooth(System.Single,System.Single,System.Single,System.Single)">
+            <summary>
+            Computes for an Inverted Sawtooth Wave. Always multiply this to the original value.
+            </summary>
+            <param name="phase">Offset from time</param>
+            <param name="frequency">Number of complete cycles in a given time</param>
+            <param name="amplitude">Maximum and minimum values</param>
+            <param name="baseValue">Offset from the result</param>
+            <returns>The computed value for the wave</returns>
+        </member>
+        <member name="M:Chen.Helpers.MathHelpers.Wave.Noisy(System.Single,System.Single)">
+            <summary>
+            Computes for a Noisy Wave. Always multiply this to the original value.
+            </summary>
+            <param name="amplitude">Maximum and minimum values</param>
+            <param name="baseValue">Offset from the result</param>
+            <returns>The computed value for the wave</returns>
         </member>
         <member name="T:Chen.Helpers.UnityHelpers.Extensions">
             <summary>
