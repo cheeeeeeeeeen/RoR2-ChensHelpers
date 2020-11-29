@@ -1,4 +1,5 @@
 ﻿using BepInEx.Logging;
+using System;
 
 namespace Chen.Helpers.LogHelpers
 {
@@ -55,6 +56,7 @@ namespace Chen.Helpers.LogHelpers
         /// <typeparam name="T">Type of the array</typeparam>
         /// <param name="data">Array of T</param>
         /// <param name="prefix">Prefix to be inserted before the data</param>
+        [Obsolete("Use MessageArray instead from Chen.Helpers.LogHelpers.Collections extension.")]
         public void Array<T>(T[] data, string prefix = "")
         {
             foreach (var datum in data)
