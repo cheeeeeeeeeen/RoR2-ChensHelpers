@@ -31,7 +31,7 @@ namespace Chen.Helpers.UnityHelpers
         /// <typeparam name="T">A Unity Component</typeparam>
         /// <param name="component">The GameObject of the component to fetch from or add to</param>
         /// <returns>The component specified as T</returns>
-        public static T GetOfAddComponent<T>(this Component component) where T : Component
+        public static T GetOrAddComponent<T>(this Component component) where T : Component
         {
             return component.gameObject.GetOrAddComponent<T>();
         }
@@ -61,7 +61,7 @@ namespace Chen.Helpers.UnityHelpers
         /// <param name="component">The GameObject of the component to fetch from or add to</param>
         /// <param name="action">Post-Processor code</param>
         /// <returns>The component specified as T</returns>
-        public static T GetOfAddComponent<T>(this Component component, Action<T> action) where T : Component
+        public static T GetOrAddComponent<T>(this Component component, Action<T> action) where T : Component
         {
             return component.gameObject.GetOrAddComponent(action);
         }
@@ -98,7 +98,7 @@ namespace Chen.Helpers.UnityHelpers
         /// <param name="getAction">Post-Processor code for fetching</param>
         /// <param name="addAction">Post-Processor code for adding</param>
         /// <returns>The component specified as T</returns>
-        public static T GetOfAddComponent<T>(this Component component, Action<T> getAction, Action<T> addAction) where T : Component
+        public static T GetOrAddComponent<T>(this Component component, Action<T> getAction, Action<T> addAction) where T : Component
         {
             return component.gameObject.GetOrAddComponent(getAction, addAction);
         }
