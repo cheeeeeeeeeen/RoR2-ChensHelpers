@@ -8,7 +8,7 @@ The library is **fully documented**.
 
 ## How to use
 
-Just download the package from Thunderstore and add the DLL files as project reference. Move the DLL files accordingly first before adding reference.
+Just download the package from **[Thunderstore](https://thunderstore.io/package/Chen/ChensHelpers/)** and add the DLL and XML files as project reference. Move the DLL and XML files accordingly first before adding reference.
 
 Documentation can be found in **[GitHub Pages](https://cheeeeeeeeeen.github.io/RoR2-ChensHelpers/)**.
 
