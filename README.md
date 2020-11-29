@@ -4,6 +4,8 @@
 
 A Risk of Rain 2 mod library of helpers that may aid other mod creators. This is mainly made for my own mods.
 
+The library is **fully documented**.
+
 ## How to use
 
 Just download the package from Thunderstore and add the DLL files as project reference. Move the DLL files accordingly first before adding reference.
@@ -16,7 +18,7 @@ Documentation can be found in **[GitHub Pages](https://cheeeeeeeeeen.github.io/R
 - Assets Manager which registers your custom Unity Asset and WWise sound bundles included in your mod.
 - General modding helpers for testing in-game, such as Pickup Droplet Generators.
 - Fetching + Adding Components to Game Objects. Easily fetch or add the component in a single line of code.
-- ... and many more. Check the documentation.
+- ... and many more. Check the [documentation](https://cheeeeeeeeeen.github.io/RoR2-ChensHelpers/).
 
 ## Contact
 - Issue Page: https://github.com/cheeeeeeeeeen/RoR2-ChensTemplate/issues
