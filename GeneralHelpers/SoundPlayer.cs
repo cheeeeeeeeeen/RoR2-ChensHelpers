@@ -29,7 +29,6 @@ namespace Chen.Helpers.GeneralHelpers
         /// </summary>
         public void Update()
         {
-            GameObject bodyObject = Instances.hostBodyObject;
             foreach (var keybind in keybinds)
             {
                 bool isPressed = Input.GetKeyDown(keybind.Key);
@@ -37,7 +36,7 @@ namespace Chen.Helpers.GeneralHelpers
                 {
                     foreach (uint eventId in keybind.Value)
                     {
-                        AkSoundEngine.PostEvent(eventId, bodyObject);
+                        AkSoundEngine.PostEvent(eventId, Instances.hostBodyObject);
                     }
                 }
             }
@@ -66,7 +65,7 @@ namespace Chen.Helpers.GeneralHelpers
         }
 
         /// <summary>
-        /// Represents the data structure for a keybind that is reponsible for posting WWise sound events.
+        /// Represents the data structure for a keybind that is responsible for posting WWise sound events.
         /// </summary>
         public struct EventPosterKey
         {
