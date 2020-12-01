@@ -16,7 +16,7 @@ Documentation can be found in **[GitHub Pages](https://cheeeeeeeeeen.github.io/R
 - Minion Ownership assignment with synchronization support and queuing system. The helper does it all instead of manually syncing them.
 - Different wave functions available, especially the sine wave.
 - Assets Manager which registers your custom Unity Asset and WWise sound bundles included in your mod.
-- General modding helpers for testing in-game, such as Pickup Droplet Generators.
+- General modding helpers for testing in-game, such as Pickup Droplet Generators and testing of WWise sounds.
 - Fetching + Adding Components to Game Objects. Easily fetch or add the component in a single line of code.
 - ... and many more. Check the [documentation](https://cheeeeeeeeeen.github.io/RoR2-ChensHelpers/).
 
