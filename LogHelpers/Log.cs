@@ -49,20 +49,5 @@ namespace Chen.Helpers.LogHelpers
         /// </summary>
         /// <param name="data">Anything</param>
         public void Warning(object data) => logger.LogWarning(data);
-
-        /// <summary>
-        /// Log an array of values using Message format.
-        /// </summary>
-        /// <typeparam name="T">Type of the array</typeparam>
-        /// <param name="data">Array of T</param>
-        /// <param name="prefix">Prefix to be inserted before the data</param>
-        [Obsolete("Use MessageArray instead from Chen.Helpers.LogHelpers.Collections extension.")]
-        public void Array<T>(T[] data, string prefix = "")
-        {
-            foreach (var datum in data)
-            {
-                Message($"{prefix}{datum}");
-            }
-        }
     }
 }
