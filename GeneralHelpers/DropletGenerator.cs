@@ -6,6 +6,12 @@ namespace Chen.Helpers.GeneralHelpers
 {
     /// <summary>
     /// A helper that allows listening to function keys to generate pickup droplets in-game.
+    /// Press F3 to generate a random white item (or essence).
+    /// Press F4 to generate a random green item (or essence).
+    /// Press F5 to generate a random red item (or essence).
+    /// Press F6 to generate a random orange item (or essence).
+    /// Press F7 to generate a random blue (both the item and equipment variants) item (or essence).
+    /// Press F8 to generate a random yellow item (or essence).
     /// </summary>
     public static class DropletGenerator
     {
@@ -22,7 +28,7 @@ namespace Chen.Helpers.GeneralHelpers
             var i8 = Input.GetKeyDown(KeyCode.F8);
             if (i3 || i4 || i5 || i6 || i7 || i8)
             {
-                var t = PlayerCharacterMasterController.instances[0].master.GetBodyObject().transform;
+                var t = Instances.hostBodyObject.transform;
 
                 List<PickupIndex> spawnList;
                 if (i3) spawnList = Run.instance.availableTier1DropList;
