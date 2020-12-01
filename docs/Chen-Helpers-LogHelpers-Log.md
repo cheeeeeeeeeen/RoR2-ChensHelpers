@@ -15,7 +15,6 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 - [Log(BepInEx.Logging.ManualLogSource)](./Chen-Helpers-LogHelpers-Log-Log(BepInEx-Logging-ManualLogSource) 'Chen.Helpers.LogHelpers.Log.Log(BepInEx.Logging.ManualLogSource)')
 
 ### Methods
-- [Array&lt;T&gt;(T[], string)](./Chen-Helpers-LogHelpers-Log-Array-T-(T--_string) 'Chen.Helpers.LogHelpers.Log.Array&lt;T&gt;(T[], string)')
 - [Debug(object)](./Chen-Helpers-LogHelpers-Log-Debug(object) 'Chen.Helpers.LogHelpers.Log.Debug(object)')
 - [Error(object)](./Chen-Helpers-LogHelpers-Log-Error(object) 'Chen.Helpers.LogHelpers.Log.Error(object)')
 - [Info(object)](./Chen-Helpers-LogHelpers-Log-Info(object) 'Chen.Helpers.LogHelpers.Log.Info(object)')
