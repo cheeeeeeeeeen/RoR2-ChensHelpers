@@ -53,6 +53,9 @@
     <Reference Include="UnityEngine.PhysicsModule">
       <HintPath>..\lib\UnityEngine.PhysicsModule.dll</HintPath>
     </Reference>
+    <Reference Include="Wwise">
+      <HintPath>..\lib\Wwise.dll</HintPath>
+    </Reference>
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
