@@ -19,7 +19,7 @@ namespace Chen.Helpers.UnityHelpers
         /// <returns>A new set of RendererInfos</returns>
         public static RendererInfo[] BuildRendererInfos(this CharacterModel model, GameObject basisObject)
         {
-            return model.BuildRendererInfos(basisObject, ShadowCastingMode.Off, false);
+            return model.BuildRendererInfos(basisObject, ShadowCastingMode.On, false);
         }
 
         /// <summary>
