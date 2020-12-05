@@ -4,7 +4,7 @@
 ### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers 'Chen.Helpers.GeneralHelpers').[SoundPlayer](./Chen-Helpers-GeneralHelpers-SoundPlayer 'Chen.Helpers.GeneralHelpers.SoundPlayer')
 
 ## SoundPlayer.EventPosterKey Struct
-Represents the data structure for a keybind that is reponsible for posting WWise sound events.  
+Represents the data structure for a keybind that is responsible for posting WWise sound events.  
 ```csharp
 public struct SoundPlayer.EventPosterKey
 ```

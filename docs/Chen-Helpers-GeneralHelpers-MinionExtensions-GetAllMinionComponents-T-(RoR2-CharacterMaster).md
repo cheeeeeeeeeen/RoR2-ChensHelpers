@@ -4,9 +4,9 @@
 ### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers 'Chen.Helpers.GeneralHelpers').[MinionExtensions](./Chen-Helpers-GeneralHelpers-MinionExtensions 'Chen.Helpers.GeneralHelpers.MinionExtensions')
 
 ## MinionExtensions.GetAllMinionComponents&lt;T&gt;(RoR2.CharacterMaster) Method
-Fetches all the minions of an owner and returns a list of the minions' component.  
+Fetches all the minions and fellow minions, then returns a list of the minions' component.  
 ```csharp
-public static System.Collections.Generic.List<T> GetAllMinionComponents<T>(this RoR2.CharacterMaster owner);
+public static System.Collections.Generic.List<T> GetAllMinionComponents<T>(this RoR2.CharacterMaster ownerOrMinion);
 ```
 
 #### Type parameters
@@ -16,8 +16,8 @@ Component to match
   
 
 #### Parameters
-<a name='Chen-Helpers-GeneralHelpers-MinionExtensions-GetAllMinionComponents-T-(RoR2-CharacterMaster)-owner'></a>
-`owner` [RoR2.CharacterMaster](https://docs.microsoft.com/en-us/dotnet/api/RoR2.CharacterMaster 'RoR2.CharacterMaster')  
+<a name='Chen-Helpers-GeneralHelpers-MinionExtensions-GetAllMinionComponents-T-(RoR2-CharacterMaster)-ownerOrMinion'></a>
+`ownerOrMinion` [RoR2.CharacterMaster](https://docs.microsoft.com/en-us/dotnet/api/RoR2.CharacterMaster 'RoR2.CharacterMaster')  
 Master of the minions  
   
 
