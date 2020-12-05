@@ -1,6 +1,6 @@
-using UnityEngine;
-using System.Collections.Generic;
 using Chen.Helpers.CollectionHelpers;
+using System.Collections.Generic;
+using UnityEngine;
 
 namespace Chen.Helpers.GeneralHelpers
 {
@@ -10,7 +10,7 @@ namespace Chen.Helpers.GeneralHelpers
     public class SoundPlayer
     {
         private readonly Dictionary<KeyCode, List<uint>> keybinds = new Dictionary<KeyCode, List<uint>>();
-        
+
         /// <summary>
         /// Constructor to create an instance of the class.
         /// A group of EventPosterKeys may be passed as parameters to automatically register them.

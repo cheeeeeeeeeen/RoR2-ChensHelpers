@@ -1,5 +1,4 @@
 ﻿using BepInEx.Logging;
-using System;
 
 namespace Chen.Helpers.LogHelpers
 {

@@ -17,7 +17,7 @@ namespace Chen.Helpers.CollectionHelpers
         /// <param name="value">The value to add into the list</param>
         /// <param name="condition">The existence condition check where T is the item from the list</param>
         /// <returns>True if the item is added. False if the item already exists.</returns>
-        public static bool ConditionalAdd<T>(this List<T> list, T value, Func<T, bool> condition) 
+        public static bool ConditionalAdd<T>(this List<T> list, T value, Func<T, bool> condition)
         {
             if (list.Exists(item => condition(item))) return false;
             list.Add(value);

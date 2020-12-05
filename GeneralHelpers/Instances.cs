@@ -36,7 +36,7 @@ namespace Chen.Helpers.GeneralHelpers
                 return instance;
             }
         }
-        
+
         /// <summary>
         /// Gets the instance of the host's CharacterMaster GameObject.
         /// </summary>
