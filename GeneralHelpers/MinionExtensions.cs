@@ -17,33 +17,40 @@ namespace Chen.Helpers.GeneralHelpers
     public static class MinionExtensions
     {
         /// <summary>
-        /// Loops through the minions and applies processing for each through an action.
+        /// Loops through the minions and fellow minions, then applies processing for each through an action.
         /// </summary>
-        /// <param name="owner">Master of the minions</param>
-        /// <param name="logic">Code to apply for each minion of the owner</param>
-        public static void LoopMinions(this CharacterMaster owner, Action<CharacterMaster> logic)
+        /// <param name="ownerOrMinion">Master of the minions or a fellow minion</param>
+        /// <param name="logic">Code to apply for each minion</param>
+        public static void LoopMinions(this CharacterMaster ownerOrMinion, Action<CharacterMaster> logic)
         {
+            MinionOwnership thisMinionOwnership = ownerOrMinion.minionOwnership;
+            if (!thisMinionOwnership) return;
             MinionOwnership[] minionOwnerships = Object.FindObjectsOfType<MinionOwnership>();
             foreach (MinionOwnership minionOwnership in minionOwnerships)
             {
-                if (minionOwnership && minionOwnership.ownerMaster && minionOwnership.ownerMaster == owner)
+                if (minionOwnership && minionOwnership.ownerMaster)
                 {
-                    CharacterMaster minion = minionOwnership.GetComponent<CharacterMaster>();
-                    logic(minion);
+                    bool ownerCondition = !thisMinionOwnership.ownerMaster && minionOwnership.ownerMaster == ownerOrMinion;
+                    bool minionCondition = thisMinionOwnership.ownerMaster && minionOwnership.ownerMaster == thisMinionOwnership.ownerMaster;
+                    if (ownerCondition || minionCondition)
+                    {
+                        CharacterMaster minion = minionOwnership.GetComponent<CharacterMaster>();
+                        logic(minion);
+                    }
                 }
             }
         }
 
         /// <summary>
-        /// Fetches all the minions of an owner and returns a list of the minions' component.
+        /// Fetches all the minions and fellow minions, then returns a list of the minions' component.
         /// </summary>
         /// <typeparam name="T">Component to match</typeparam>
-        /// <param name="owner">Master of the minions</param>
+        /// <param name="ownerOrMinion">Master of the minions</param>
         /// <returns>List of components of the minions</returns>
-        public static List<T> GetAllMinionComponents<T>(this CharacterMaster owner) where T : Component
+        public static List<T> GetAllMinionComponents<T>(this CharacterMaster ownerOrMinion) where T : Component
         {
             List<T> list = new List<T>();
-            LoopMinions(owner, (minion) =>
+            LoopMinions(ownerOrMinion, (minion) =>
             {
                 T component = minion.gameObject.GetComponent<T>();
                 if (component) list.Add(component);
