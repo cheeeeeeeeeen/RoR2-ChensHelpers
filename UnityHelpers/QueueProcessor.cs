@@ -20,6 +20,15 @@ namespace Chen.Helpers.UnityHelpers
         protected abstract int itemsPerFrame { get; set; }
 
         /// <summary>
+        /// Adds an item into the data structure for processing. No need to override this, but one may do so for complex implementations.
+        /// </summary>
+        /// <param name="item">New item to add</param>
+        public virtual void Add(T item)
+        {
+            processQueue.Enqueue(item);
+        }
+
+        /// <summary>
         /// A method the contains the main processing logic. It is required to be implemented by the child class.
         /// This method returns a boolean that determines the outcome of the item from the queue.
         /// Returning true will dispose of the item. Returning false will put the item back at the end of the queue.

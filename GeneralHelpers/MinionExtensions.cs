@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
 using static Chen.Helpers.HelperPlugin;
+using static Chen.Helpers.GeneralHelpers.MinionExtensions.OwnershipSyncer;
 using Object = UnityEngine.Object;
 
 namespace Chen.Helpers.GeneralHelpers
@@ -145,7 +146,7 @@ namespace Chen.Helpers.GeneralHelpers
                 if (useQueue)
                 {
                     OwnershipSyncer syncer = Run.instance.gameObject.GetOrAddComponent<OwnershipSyncer>();
-                    syncer.Add(minionNetId, ownerNetId);
+                    syncer.Add(new OwnerMinionPair(minionNetId, ownerNetId));
                 }
                 else
                 {
@@ -159,29 +160,36 @@ namespace Chen.Helpers.GeneralHelpers
             }
         }
 
-        internal class OwnershipSyncer : MonoBehaviour
+        internal class OwnershipSyncer : QueueProcessor<OwnerMinionPair>
         {
-            private readonly Queue<OwnerMinionPair> netIds = new Queue<OwnerMinionPair>();
+            protected override int itemsPerFrame { get; set; } = 1;
 
-            public void Add(NetworkInstanceId minionNetId, NetworkInstanceId ownerNetId)
-            {
-                netIds.Enqueue(new OwnerMinionPair(minionNetId, ownerNetId));
-            }
+            // private readonly Queue<OwnerMinionPair> netIds = new Queue<OwnerMinionPair>();
 
-            private void FixedUpdate()
+            // public void Add(NetworkInstanceId minionNetId, NetworkInstanceId ownerNetId)
+            // {
+            //     netIds.Enqueue(new OwnerMinionPair(minionNetId, ownerNetId));
+            // }
+
+            protected override bool Process(OwnerMinionPair pair)
             {
-                if (netIds.Count > 0)
+                GameObject minionObject = Util.FindNetworkObject(pair.minionNetId);
+                GameObject ownerObject = Util.FindNetworkObject(pair.ownerNetId);
+                if (!minionObject || !ownerObject) return false;
+                else
                 {
-                    OwnerMinionPair pair = netIds.Dequeue();
-                    GameObject minionObject = Util.FindNetworkObject(pair.minionNetId);
-                    GameObject ownerObject = Util.FindNetworkObject(pair.ownerNetId);
-                    if (!minionObject || !ownerObject) netIds.Enqueue(pair);
-                    else ProcessAssignment(minionObject, ownerObject, "OwnershipSyncer");
+                    ProcessAssignment(minionObject, ownerObject, "OwnershipSyncer");
+                    return true;
                 }
-                else Destroy(this);
             }
 
-            private struct OwnerMinionPair
+            protected override void FixedUpdate()
+            {
+                base.FixedUpdate();
+                if (processQueue.Count <= 0) Destroy(this);
+            }
+
+            internal struct OwnerMinionPair
             {
                 public NetworkInstanceId minionNetId;
                 public NetworkInstanceId ownerNetId;
