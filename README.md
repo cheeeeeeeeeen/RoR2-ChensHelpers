@@ -18,6 +18,7 @@ Documentation can be found in **[GitHub Pages](https://cheeeeeeeeeen.github.io/R
 - Assets Manager which registers your custom Unity Asset and WWise sound bundles included in your mod.
 - General modding helpers for testing in-game, such as Pickup Droplet Generators and testing of WWise sounds.
 - Fetching + Adding Components to Game Objects. Easily fetch or add the component in a single line of code.
+- Easily implement Queuing Systems.
 - ... and many more. Check the [documentation](https://cheeeeeeeeeen.github.io/RoR2-ChensHelpers/).
 
 ## Contact
