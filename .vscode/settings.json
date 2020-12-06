@@ -4,5 +4,19 @@
         "Behaviour",
         "Pcmc",
         "Syncer"
-    ]
+    ],
+    "docomment.advanced": {
+        "cs": {
+            "property": {
+                "attributes": [
+                    "summary"
+                ]
+            },
+            "field": {
+                "attributes": [
+                    "summary"
+                ]
+            }
+        }
+    }
 }
