@@ -20,8 +20,8 @@ namespace Chen.Helpers.UnityHelpers
         /// </summary>
         protected abstract bool repeatUntilSuccess { get; set; }
 
-        private List<T> failedItems = new List<T>();
-        
+        private readonly List<T> failedItems = new List<T>();
+
         /// <summary>
         /// Adds an item into the data structure for processing. No need to override this, but one may do so for complex implementations.
         /// </summary>

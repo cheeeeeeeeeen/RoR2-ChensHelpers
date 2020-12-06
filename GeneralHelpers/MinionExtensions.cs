@@ -6,8 +6,8 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Networking;
-using static Chen.Helpers.HelperPlugin;
 using static Chen.Helpers.GeneralHelpers.MinionExtensions.OwnershipSyncer;
+using static Chen.Helpers.HelperPlugin;
 using Object = UnityEngine.Object;
 
 namespace Chen.Helpers.GeneralHelpers
@@ -163,13 +163,6 @@ namespace Chen.Helpers.GeneralHelpers
         internal class OwnershipSyncer : QueueProcessor<OwnerMinionPair>
         {
             protected override int itemsPerFrame { get; set; } = 1;
-
-            // private readonly Queue<OwnerMinionPair> netIds = new Queue<OwnerMinionPair>();
-
-            // public void Add(NetworkInstanceId minionNetId, NetworkInstanceId ownerNetId)
-            // {
-            //     netIds.Enqueue(new OwnerMinionPair(minionNetId, ownerNetId));
-            // }
 
             protected override bool Process(OwnerMinionPair pair)
             {
