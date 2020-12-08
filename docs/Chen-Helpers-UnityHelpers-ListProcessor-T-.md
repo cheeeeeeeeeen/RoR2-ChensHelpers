@@ -20,6 +20,7 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 - [processList](./Chen-Helpers-UnityHelpers-ListProcessor-T--processList 'Chen.Helpers.UnityHelpers.ListProcessor&lt;T&gt;.processList')
 
 ### Properties
+- [processInterval](./Chen-Helpers-UnityHelpers-ListProcessor-T--processInterval 'Chen.Helpers.UnityHelpers.ListProcessor&lt;T&gt;.processInterval')
 - [repeatUntilSuccess](./Chen-Helpers-UnityHelpers-ListProcessor-T--repeatUntilSuccess 'Chen.Helpers.UnityHelpers.ListProcessor&lt;T&gt;.repeatUntilSuccess')
 
 ### Methods

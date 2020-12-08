@@ -6,7 +6,7 @@
 ## QueueProcessor&lt;T&gt;.processQueue Field
 The data structure where all items are queued in for processing.  
 ```csharp
-protected Queue<T> processQueue;
+protected readonly Queue<T> processQueue;
 ```
 
 #### Field Value

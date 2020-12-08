@@ -21,6 +21,7 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 ### Properties
 - [itemsPerFrame](./Chen-Helpers-UnityHelpers-QueueProcessor-T--itemsPerFrame 'Chen.Helpers.UnityHelpers.QueueProcessor&lt;T&gt;.itemsPerFrame')
+- [processInterval](./Chen-Helpers-UnityHelpers-QueueProcessor-T--processInterval 'Chen.Helpers.UnityHelpers.QueueProcessor&lt;T&gt;.processInterval')
 
 ### Methods
 - [Add(T)](./Chen-Helpers-UnityHelpers-QueueProcessor-T--Add(T) 'Chen.Helpers.UnityHelpers.QueueProcessor&lt;T&gt;.Add(T)')
