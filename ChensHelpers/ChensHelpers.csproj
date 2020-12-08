@@ -16,7 +16,7 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <WarningLevel>5</WarningLevel>
-    <DocumentationFile>temp.xml</DocumentationFile>
+    <DocumentationFile>_docs\ChensHelpers.xml</DocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
