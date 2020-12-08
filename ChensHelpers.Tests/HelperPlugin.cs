@@ -1,14 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using ClassBeingTested = Chen.Helpers.HelperPlugin;
 
-namespace Chen.Helpers.Tests.HelperPlugin
+namespace Chen.Helpers.Tests
 {
     [TestClass]
-    public class Constants
+    public class HelperPlugin
     {
         [TestMethod]
         public void ModVer_Length_ReturnsCorrectFormat()
         {
-            string result = Helpers.HelperPlugin.ModVer;
+            string result = ClassBeingTested.ModVer;
             const int ModVersionCount = 3;
 
             int count = result.Split('.').Length;
@@ -19,7 +20,7 @@ namespace Chen.Helpers.Tests.HelperPlugin
         [TestMethod]
         public void ModName_Value_ReturnsCorrectName()
         {
-            string result = Helpers.HelperPlugin.ModName;
+            string result = ClassBeingTested.ModName;
             const string ModName = "ChensHelpers";
 
             Assert.AreEqual(ModName, result);
@@ -28,7 +29,7 @@ namespace Chen.Helpers.Tests.HelperPlugin
         [TestMethod]
         public void ModGuid_Value_ReturnsCorrectGuid()
         {
-            string result = Helpers.HelperPlugin.ModGuid;
+            string result = ClassBeingTested.ModGuid;
             const string ModGuid = "com.Chen.ChensHelpers";
 
             Assert.AreEqual(ModGuid, result);
