@@ -164,6 +164,8 @@ namespace Chen.Helpers.GeneralHelpers
         {
             protected override int itemsPerFrame { get; set; } = 1;
 
+            protected override float processInterval { get; set; } = 0;
+
             protected override bool Process(OwnerMinionPair pair)
             {
                 GameObject minionObject = Util.FindNetworkObject(pair.minionNetId);

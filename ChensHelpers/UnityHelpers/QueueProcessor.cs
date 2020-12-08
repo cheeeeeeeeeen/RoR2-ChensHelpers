@@ -12,12 +12,19 @@ namespace Chen.Helpers.UnityHelpers
         /// <summary>
         /// The data structure where all items are queued in for processing.
         /// </summary>
-        protected Queue<T> processQueue = new Queue<T>();
+        protected readonly Queue<T> processQueue = new Queue<T>();
 
         /// <summary>
         /// Number of items to process per frame.
         /// </summary>
         protected abstract int itemsPerFrame { get; set; }
+
+        /// <summary>
+        /// The time gap in seconds in between processes.
+        /// </summary>
+        protected abstract float processInterval { get; set; }
+
+        private float intervalTimer = 0f;
 
         /// <summary>
         /// Adds an item into the data structure for processing. No need to override this, but one may do so for complex implementations.
@@ -59,20 +66,25 @@ namespace Chen.Helpers.UnityHelpers
         /// </summary>
         protected virtual void FixedUpdate()
         {
-            for (int i = 0; i < itemsPerFrame; i++)
+            intervalTimer += Time.fixedDeltaTime;
+            if (intervalTimer >= processInterval)
             {
-                if (processQueue.Count > 0)
+                for (int i = 0; i < itemsPerFrame; i++)
                 {
-                    T item = processQueue.Dequeue();
-                    bool outcome = Process(item);
-                    if (outcome) OnSuccess(item);
-                    else
+                    if (processQueue.Count > 0)
                     {
-                        OnFailure(item);
-                        processQueue.Enqueue(item);
+                        T item = processQueue.Dequeue();
+                        bool outcome = Process(item);
+                        if (outcome) OnSuccess(item);
+                        else
+                        {
+                            OnFailure(item);
+                            processQueue.Enqueue(item);
+                        }
                     }
+                    else break;
                 }
-                else break;
+                intervalTimer -= processInterval;
             }
         }
     }

@@ -20,6 +20,12 @@ namespace Chen.Helpers.UnityHelpers
         /// </summary>
         protected abstract bool repeatUntilSuccess { get; set; }
 
+        /// <summary>
+        /// The time gap in seconds in between processes.
+        /// </summary>
+        protected abstract float processInterval { get; set; }
+
+        private float intervalTimer = 0f;
         private readonly List<T> failedItems = new List<T>();
 
         /// <summary>
@@ -64,20 +70,25 @@ namespace Chen.Helpers.UnityHelpers
         /// </summary>
         protected virtual void FixedUpdate()
         {
-            while (processList.Count > 0)
+            intervalTimer += Time.fixedDeltaTime;
+            if (intervalTimer >= processInterval)
             {
-                foreach (T item in processList)
+                while (processList.Count > 0)
                 {
-                    bool result = Process(item);
-                    if (result) OnSuccess(item);
-                    else OnFailure(item);
+                    foreach (T item in processList)
+                    {
+                        bool result = Process(item);
+                        if (result) OnSuccess(item);
+                        else OnFailure(item);
+                    }
+                    if (repeatUntilSuccess)
+                    {
+                        processList.Clear();
+                        processList.AddRange(failedItems);
+                    }
+                    else break;
                 }
-                if (repeatUntilSuccess)
-                {
-                    processList.Clear();
-                    processList.AddRange(failedItems);
-                }
-                else break;
+                intervalTimer -= processInterval;
             }
         }
     }
