@@ -10,8 +10,12 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>true</Optimize>
-    <DocumentationFile>C:\Users\Chen\Documents\Visual Studio 2019\Risk of Rain 2\RoR2-ChensHelpers\_docs\ChensHelpers.xml</DocumentationFile>
+    <DocumentationFile>_docs\ChensHelpers.xml</DocumentationFile>
     <DefaultDocumentationWikiLinks>false</DefaultDocumentationWikiLinks>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <WarningLevel>5</WarningLevel>
   </PropertyGroup>
 
   <ItemGroup>
@@ -59,11 +63,11 @@
   </ItemGroup>
 
   <Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-    <Exec Command="xcopy &quot;C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\r2modman\BepInEx\plugins\tristanmcpherson-R2API\R2API\R2API.dll&quot; &quot;$(ProjectDir)lib&quot; /Y&#xD;&#xA;xcopy &quot;C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\r2modman\BepInEx\plugins\tristanmcpherson-R2API\R2API\R2API.xml&quot; &quot;$(ProjectDir)lib&quot; /Y&#xD;&#xA;xcopy &quot;C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\r2modman\BepInEx\plugins\tristanmcpherson-R2API\R2API\MMHOOK_Assembly-CSharp.dll&quot; &quot;$(ProjectDir)lib&quot; /Y&#xD;&#xA;xcopy &quot;C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\r2modman\BepInEx\core\BepInEx.dll&quot; &quot;$(ProjectDir)lib&quot; /Y" />
+    <Exec Command="if '$(ConfigurationName)' == 'Debug' (&#xD;&#xA;  mkdir &quot;$(ProjectDir)lib&quot;&#xD;&#xA;  cd &quot;$(ProjectDir)lib&quot;&#xD;&#xA;  copy &quot;C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\r2modman\BepInEx\plugins\tristanmcpherson-R2API\R2API\R2API.dll&quot; . /Y&#xD;&#xA;  copy &quot;C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\r2modman\BepInEx\plugins\tristanmcpherson-R2API\R2API\R2API.xml&quot; . /Y&#xD;&#xA;  copy &quot;C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\r2modman\BepInEx\plugins\tristanmcpherson-R2API\R2API\MMHOOK_Assembly-CSharp.dll&quot; . /Y&#xD;&#xA;  copy &quot;C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\r2modman\BepInEx\core\BepInEx.dll&quot; . /Y&#xD;&#xA;)" />
   </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="mkdir &quot;$(ProjectDir)Build&quot;&#xD;&#xA;cd &quot;$(ProjectDir)Build&quot;&#xD;&#xA;del * /Q&#xD;&#xA;xcopy &quot;$(TargetPath)&quot; /Y&#xD;&#xA;xcopy &quot;$(ProjectDir)ModMeta&quot; /Y&#xD;&#xA;xcopy &quot;$(ProjectDir)README.md&quot; /Y&#xD;&#xA;xcopy &quot;$(ProjectDir)LICENSE.txt&quot; /Y&#xD;&#xA;xcopy &quot;$(ProjectDir)_docs\$(TargetName).xml&quot; /Y&#xD;&#xA;7z a Build.zip .\* -x!Build.zip -x!old_*&#xD;&#xA;&#xD;&#xA;xcopy &quot;$(TargetName).xml&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\r2modman\BepInEx\plugins\Chen-ChensHelpers&quot; /Y&#xD;&#xA;xcopy &quot;$(TargetFileName)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\r2modman\BepInEx\plugins\Chen-ChensHelpers&quot; /Y" />
+    <Exec Command="mkdir &quot;$(ProjectDir)Build&quot;&#xD;&#xA;cd &quot;$(ProjectDir)Build&quot;&#xD;&#xA;del * /Q&#xD;&#xA;copy &quot;$(TargetPath)&quot; . /Y&#xD;&#xA;if '$(ConfigurationName)' == 'Debug' (&#xD;&#xA;  copy &quot;$(ProjectDir)ModMeta&quot; . /Y&#xD;&#xA;  copy &quot;$(ProjectDir)README.md&quot; . /Y&#xD;&#xA;  copy &quot;$(ProjectDir)LICENSE.txt&quot; . /Y&#xD;&#xA;  copy &quot;$(ProjectDir)_docs\$(TargetName).xml&quot; . /Y&#xD;&#xA;  7z a Build.zip .\* -x!Build.zip -x!old_*&#xD;&#xA;  copy &quot;$(TargetName).xml&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\r2modman\BepInEx\plugins\Chen-ChensHelpers&quot; /Y&#xD;&#xA;  copy &quot;$(TargetFileName)&quot; &quot;C:\Program Files (x86)\Steam\steamapps\common\Risk of Rain 2\r2modman\BepInEx\plugins\Chen-ChensHelpers&quot; /Y&#xD;&#xA;)" />
   </Target>
 
 </Project>

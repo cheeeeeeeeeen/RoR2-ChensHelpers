@@ -6,9 +6,19 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{98E96239-FC6F-4F46-858C-7C6A55BA7554}"
 	ProjectSection(SolutionItems) = preProject
 		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		.github\workflows\build.yml = .github\workflows\build.yml
+		LICENSE.txt = LICENSE.txt
+		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChensHelpers", "ChensHelpers.csproj", "{CD77216F-9298-46A2-B64F-DFCDCA2CA852}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChensHelpers", "ChensHelpers\ChensHelpers.csproj", "{08FB204E-0B1A-44C6-B068-A5A43F840F81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChensHelpers.Tests", "ChensHelpers.Tests\ChensHelpers.Tests.csproj", "{7890A6E0-CC98-422D-AA8B-B83B304EC046}"
+	ProjectSection(ProjectDependencies) = postProject
+		{08FB204E-0B1A-44C6-B068-A5A43F840F81} = {08FB204E-0B1A-44C6-B068-A5A43F840F81}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -16,10 +26,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CD77216F-9298-46A2-B64F-DFCDCA2CA852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CD77216F-9298-46A2-B64F-DFCDCA2CA852}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CD77216F-9298-46A2-B64F-DFCDCA2CA852}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CD77216F-9298-46A2-B64F-DFCDCA2CA852}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08FB204E-0B1A-44C6-B068-A5A43F840F81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08FB204E-0B1A-44C6-B068-A5A43F840F81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08FB204E-0B1A-44C6-B068-A5A43F840F81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08FB204E-0B1A-44C6-B068-A5A43F840F81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7890A6E0-CC98-422D-AA8B-B83B304EC046}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7890A6E0-CC98-422D-AA8B-B83B304EC046}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7890A6E0-CC98-422D-AA8B-B83B304EC046}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7890A6E0-CC98-422D-AA8B-B83B304EC046}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
