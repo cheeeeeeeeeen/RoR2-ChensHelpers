@@ -83,9 +83,9 @@ namespace Chen.Helpers.MathHelpers
         /// <param name="preProcess">Preprocessor code</param>
         /// <returns>Average of the values in the array</returns>
         /// <exception cref="DivideByZeroException">Raised when the array length is 0 when division is performed.</exception>
-        public static int Average(this int[] numbers, Func<int, int> preProcess = null)
+        public static float Average(this int[] numbers, Func<int, int> preProcess = null)
         {
-            return Sum(numbers, preProcess) / numbers.Length;
+            return Average(numbers, preProcess);
         }
 
         /// <summary>
