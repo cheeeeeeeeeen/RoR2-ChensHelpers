@@ -85,7 +85,7 @@ namespace Chen.Helpers.MathHelpers
         /// <exception cref="DivideByZeroException">Raised when the array length is 0 when division is performed.</exception>
         public static float Average(this int[] numbers, Func<int, int> preProcess = null)
         {
-            return Average(numbers, preProcess);
+            return Sum(numbers, preProcess) / numbers.Length;
         }
 
         /// <summary>

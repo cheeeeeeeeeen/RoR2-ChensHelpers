@@ -8,7 +8,7 @@
     <ProjectGuid>{7890A6E0-CC98-422D-AA8B-B83B304EC046}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ChensHelpers.Tests</RootNamespace>
+    <RootNamespace>Chen.Helpers.Tests</RootNamespace>
     <AssemblyName>ChensHelpers.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -54,7 +54,10 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CollectionHelpers\Extensions.cs" />
     <Compile Include="HelperPlugin.cs" />
+    <Compile Include="MathHelpers\Arithmetic.cs" />
+    <Compile Include="MathHelpers\Percent.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

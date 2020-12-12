@@ -1,4 +1,5 @@
 using System.Globalization;
+
 namespace Chen.Helpers.MathHelpers
 {
     /// <summary>
@@ -8,7 +9,7 @@ namespace Chen.Helpers.MathHelpers
     {
         private static readonly int[] groupSize = new int[] { 3 };
 
-        private static NumberFormatInfo numberFormatInfo = new NumberFormatInfo()
+        private static readonly NumberFormatInfo numberFormatInfo = new NumberFormatInfo()
         {
             PercentPositivePattern = 1,
             PercentNegativePattern = 1,
@@ -40,7 +41,7 @@ namespace Chen.Helpers.MathHelpers
         /// <returns>Formatted string of the number</returns>
         public static string ToPercent(this float number, uint precision)
         {
-            return number.ToPercent().ToString($"P{precision}", numberFormatInfo);
+            return number.ToString($"P{precision}", numberFormatInfo);
         }
 
         /// <summary>
