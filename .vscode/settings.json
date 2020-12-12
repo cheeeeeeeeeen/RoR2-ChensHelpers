@@ -4,8 +4,11 @@
         "Behaviour",
         "Pcmc",
         "Syncer",
+        "Thunderstore",
+        "bbepis",
         "chens",
-        "helpers"
+        "helpers",
+        "tristanmcpherson"
     ],
     "docomment.advanced": {
         "cs": {
