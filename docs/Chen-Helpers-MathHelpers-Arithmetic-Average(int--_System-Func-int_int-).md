@@ -7,7 +7,7 @@
 Computes for the average of the numbers in the array. Preprocessing each item is possible before they are computed by providing the logic.  
 e.g. Average(new int[] { 2, -4, 2 }, item => Mathf.Max(2, item)) will yield a result of 2.  
 ```csharp
-public static int Average(this int[] numbers, System.Func<int,int> preProcess=null);
+public static float Average(this int[] numbers, System.Func<int,int> preProcess=null);
 ```
 
 #### Parameters
@@ -21,7 +21,7 @@ Preprocessor code
   
 
 #### Returns
-[System.Int32](https://docs.microsoft.com/en-us/dotnet/api/System.Int32 'System.Int32')  
+[System.Single](https://docs.microsoft.com/en-us/dotnet/api/System.Single 'System.Single')  
 Average of the values in the array  
 
 #### Exceptions
