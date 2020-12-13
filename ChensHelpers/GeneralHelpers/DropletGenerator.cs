@@ -38,7 +38,10 @@ namespace Chen.Helpers.GeneralHelpers
                 else if (i7) spawnList = Run.instance.availableLunarDropList;
                 else spawnList = Run.instance.availableBossDropList;
 
-                PickupDropletController.CreatePickupDroplet(spawnList[Run.instance.spawnRng.RangeInt(0, spawnList.Count)], t.position, new Vector3(0f, -5f, 0f));
+                PickupDropletController.CreatePickupDroplet(
+                    spawnList[Run.instance.spawnRng.RangeInt(0, spawnList.Count)],
+                    t.position, new Vector3(0f, -5f, 0f)
+                );
             }
         }
     }
