@@ -1,9 +1,8 @@
-﻿using Chen.Helpers.CollectionHelpers;
-using R2API;
+﻿using R2API;
 using System;
-using System.Collections.Generic;
 using System.Reflection;
 using UnityEngine;
+using Object = UnityEngine.Object;
 
 namespace Chen.Helpers.GeneralHelpers
 {
@@ -13,67 +12,39 @@ namespace Chen.Helpers.GeneralHelpers
     /// </summary>
     public class AssetsManager
     {
-        private readonly List<BundleInfo> bundleInfos = new List<BundleInfo>();
-
-        /// <summary>
-        /// The default constructor one may use to add bundles later.
-        /// </summary>
-        public AssetsManager()
-        {
-        }
+        private readonly BundleInfo bundleInfo;
 
         /// <summary>
         /// Constructor to use if the bundles are already made.
         /// </summary>
-        /// <param name="bundles">Group of bundles for the helper class to manage</param>
-        public AssetsManager(params BundleInfo[] bundles)
+        /// <param name="bundleInfo">Bundle for the helper class to manage</param>
+        public AssetsManager(BundleInfo bundleInfo)
         {
-            bundleInfos.ConditionalAddRange(bundles, (listItem, arrayItem) => listItem.Equals(arrayItem));
+            this.bundleInfo = bundleInfo;
         }
 
         /// <summary>
-        /// Used to add a bundle for the manager to handle.
+        /// Invoke this method to start registering the bundle assigned to this manager.
         /// </summary>
-        /// <param name="bundle">A bundle data</param>
-        /// <returns>True if the bundle is added. False if the bundle already exists or has the same name.</returns>
-        public bool Add(BundleInfo bundle) => bundleInfos.ConditionalAdd(bundle, (listItem) => listItem.Equals(bundle));
-
-        /// <summary>
-        /// Used to add a bundle for the manager to handle.
-        /// This is an overload alternative.
-        /// </summary>
-        /// <param name="modPrefix">Prefix to use for the bundle</param>
-        /// <param name="source">Embedded resource path of the bundle</param>
-        /// <param name="type">Bundle Type</param>
-        /// <returns>True if the bundle is added. False if the bundle already exists or has the same name.</returns>
-        public bool Add(string modPrefix, string source, BundleType type)
+        /// <returns>Null, or an AssetBundle object if the BundleType is a UnityAssetBundle.</returns>
+        public Object Register()
         {
-            return Add(new BundleInfo(modPrefix, source, type));
-        }
-
-        /// <summary>
-        /// Invoke this method to start registering all bundles assigned to this manager.
-        /// </summary>
-        public void RegisterAll()
-        {
-            foreach (BundleInfo bundleInfo in bundleInfos)
+            using (var stream = Assembly.GetCallingAssembly().GetManifestResourceStream(bundleInfo.source))
             {
-                using (var stream = Assembly.GetCallingAssembly().GetManifestResourceStream(bundleInfo.source))
+                switch (bundleInfo.type)
                 {
-                    switch (bundleInfo.type)
-                    {
-                        case BundleType.UnityAssetBundle:
-                            var bundle = AssetBundle.LoadFromStream(stream);
-                            var provider = new AssetBundleResourcesProvider(bundleInfo.modPrefix, bundle);
-                            ResourcesAPI.AddProvider(provider);
-                            break;
+                    case BundleType.UnityAssetBundle:
+                        var bundle = AssetBundle.LoadFromStream(stream);
+                        return bundle;
 
-                        case BundleType.WWiseSoundBank:
-                            var bytes = new byte[stream.Length];
-                            stream.Read(bytes, 0, bytes.Length);
-                            SoundAPI.SoundBanks.Add(bytes);
-                            break;
-                    }
+                    case BundleType.WWiseSoundBank:
+                        var bytes = new byte[stream.Length];
+                        stream.Read(bytes, 0, bytes.Length);
+                        SoundAPI.SoundBanks.Add(bytes);
+                        return null;
+
+                    default:
+                        return null;
                 }
             }
         }
