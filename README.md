@@ -31,7 +31,7 @@ Documentation can be found in **[GitHub Pages](https://cheeeeeeeeeen.github.io/R
 - ... and many more. Check the [documentation](https://cheeeeeeeeeen.github.io/RoR2-ChensHelpers/).
 
 ## Contact
-- Issue Page: https://github.com/cheeeeeeeeeen/RoR2-ChensTemplate/issues
+- Issue Page: https://github.com/cheeeeeeeeeen/RoR2-ChensHelpers/issues
 - Email: `blancfaye7@gmail.com`
 - Discord: `Chen#1218`
 - RoR2 Modding Server: https://discord.com/invite/5MbXZvd
