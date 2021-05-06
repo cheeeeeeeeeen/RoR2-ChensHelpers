@@ -27,7 +27,11 @@ Documentation can be found in **[GitHub Pages](https://cheeeeeeeeeen.github.io/R
 - Assets Manager which registers your custom Unity Asset and WWise sound bundles included in your mod.
 - General modding helpers for testing in-game, such as Pickup Droplet Generators and testing of WWise sounds.
 - Fetching + Adding Components to Game Objects. Easily fetch or add the component in a single line of code.
-- Easily implement Queuing Systems.
+- Easily implement List Processors and Queue Processors.
+- Easily replace generic models of certain game objects with custom ones.
+- Extensions to C# Enumerable and native Objects, such as easily converting an array to a List.
+- Quick access to the host player object of the game when catering to multiplayer features.
+- Extension to BepInEx loggers, such as allowing to print an array easily by calling just one method.
 - ... and many more. Check the [documentation](https://cheeeeeeeeeen.github.io/RoR2-ChensHelpers/).
 
 ## Contact

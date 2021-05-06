@@ -57,6 +57,7 @@ namespace Chen.Helpers.GeneralHelpers
         {
             /// <summary>
             /// The mod prefix is defined to be the identifier to the bundle for accessing. It should always start with "@".
+            /// Do not use this as this is already unused.
             /// </summary>
             public string modPrefix;
 
@@ -71,11 +72,12 @@ namespace Chen.Helpers.GeneralHelpers
             public BundleType type;
 
             /// <summary>
-            /// Constructor used to build BundleInfo.
+            /// Deprecated constructor used to build BundleInfo.
             /// </summary>
             /// <param name="modPrefix">The prefix used to access the bundle</param>
             /// <param name="source">The resource path of the bundle</param>
             /// <param name="type">Type of the bundle</param>
+            [Obsolete("This constructor is deprecated. Please omit the modPrefix argument as it is not needed anymore.")]
             public BundleInfo(string modPrefix, string source, BundleType type)
             {
                 this.modPrefix = modPrefix;
@@ -84,11 +86,23 @@ namespace Chen.Helpers.GeneralHelpers
             }
 
             /// <summary>
+            /// Constructor used to build BundleInfo.
+            /// </summary>
+            /// <param name="source">The resource path of the bundle</param>
+            /// <param name="type">Type of the bundle</param>
+            public BundleInfo(string source, BundleType type)
+            {
+                this.source = source;
+                this.type = type;
+                modPrefix = null;
+            }
+
+            /// <summary>
             /// Defines the equality of this struct. Always use this method to compare BundleInfo data.
             /// </summary>
             /// <param name="other">The other BundleInfo to compare with</param>
             /// <returns>The equality truthiness</returns>
-            public bool Equals(BundleInfo other) => modPrefix == other.modPrefix && source == other.source;
+            public bool Equals(BundleInfo other) => source == other.source;
         }
 
         /// <summary>

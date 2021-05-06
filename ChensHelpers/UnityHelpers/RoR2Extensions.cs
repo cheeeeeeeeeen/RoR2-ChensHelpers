@@ -48,5 +48,32 @@ namespace Chen.Helpers.UnityHelpers
 
             return model.baseRendererInfos;
         }
+
+        /// <summary>
+        /// Replaces the model inside a GameObject's Model Base.
+        /// This is only applicable to GameObjects that have a "ModelBase" or "Model Base" object, as well as a ModelLocator component.
+        /// The method will do nothing if it cannot find the model base object.
+        /// </summary>
+        /// <param name="originalClonedObject">The whole original cloned object</param>
+        /// <param name="replacementModel">The replacement model loaded from an asset bundle</param>
+        public static void ReplaceModel(this GameObject originalClonedObject, GameObject replacementModel)
+        {
+            Transform node;
+            ModelLocator modelLocator = originalClonedObject.GetComponent<ModelLocator>();
+            if (modelLocator && ((node = originalClonedObject.transform.Find("ModelBase")) || (node = originalClonedObject.transform.Find("Model Base")))) Object.Destroy(node);
+            else return;
+
+            GameObject modelBase = new GameObject("ModelBase");
+            modelBase.transform.parent = originalClonedObject.transform;
+            modelBase.transform.localPosition = Vector3.zero;
+            modelBase.transform.localRotation = Quaternion.identity;
+            modelBase.transform.localScale = Vector3.one;
+            Transform modelTransform = replacementModel.transform;
+            modelTransform.parent = modelBase.transform;
+            modelTransform.localPosition = Vector3.zero;
+            modelTransform.localRotation = Quaternion.identity;
+            modelLocator.modelTransform = replacementModel.transform;
+            modelLocator.modelBaseTransform = modelBase.transform;
+        }
     }
 }
