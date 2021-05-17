@@ -58,9 +58,13 @@ namespace Chen.Helpers.UnityHelpers
         /// <param name="replacementModel">The replacement model loaded from an asset bundle</param>
         public static void ReplaceModel(this GameObject originalClonedObject, GameObject replacementModel)
         {
-            Transform node;
             ModelLocator modelLocator = originalClonedObject.GetComponent<ModelLocator>();
-            if (modelLocator && ((node = originalClonedObject.transform.Find("ModelBase")) || (node = originalClonedObject.transform.Find("Model Base")))) Object.Destroy(node);
+            if (modelLocator)
+            {
+                Transform node;
+                if (node = originalClonedObject.transform.Find("ModelBase")) Object.Destroy(node.gameObject);
+                if (node = originalClonedObject.transform.Find("Model Base")) Object.Destroy(node.gameObject);
+            }
             else return;
 
             GameObject modelBase = new GameObject("ModelBase");
