@@ -13,6 +13,7 @@ IEquatable<BundleInfo>
 Implements [System.IEquatable&lt;](https://docs.microsoft.com/en-us/dotnet/api/System.IEquatable-1 'System.IEquatable`1')[AssetsManager.BundleInfo](./Chen-Helpers-GeneralHelpers-AssetsManager-BundleInfo 'Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo')[&gt;](https://docs.microsoft.com/en-us/dotnet/api/System.IEquatable-1 'System.IEquatable`1')  
 
 ### Constructors
+- [BundleInfo(string, Chen.Helpers.GeneralHelpers.AssetsManager.BundleType)](./Chen-Helpers-GeneralHelpers-AssetsManager-BundleInfo-BundleInfo(string_Chen-Helpers-GeneralHelpers-AssetsManager-BundleType) 'Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.BundleInfo(string, Chen.Helpers.GeneralHelpers.AssetsManager.BundleType)')
 - [BundleInfo(string, string, Chen.Helpers.GeneralHelpers.AssetsManager.BundleType)](./Chen-Helpers-GeneralHelpers-AssetsManager-BundleInfo-BundleInfo(string_string_Chen-Helpers-GeneralHelpers-AssetsManager-BundleType) 'Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo.BundleInfo(string, string, Chen.Helpers.GeneralHelpers.AssetsManager.BundleType)')
 
 ### Fields

@@ -6,7 +6,7 @@
 ## HelperPlugin.ModVer Field
 Mod version of the plugin. Useful for fetching the version dynamically when depending on it.  
 ```csharp
-public const string ModVer = 1.0.8;
+public const string ModVer = 1.0.9;
 ```
 
 #### Field Value

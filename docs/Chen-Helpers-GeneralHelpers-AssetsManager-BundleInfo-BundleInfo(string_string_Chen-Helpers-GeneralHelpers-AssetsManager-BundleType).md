@@ -4,7 +4,7 @@
 ### [Chen.Helpers.GeneralHelpers](./Chen-Helpers-GeneralHelpers 'Chen.Helpers.GeneralHelpers').[AssetsManager](./Chen-Helpers-GeneralHelpers-AssetsManager 'Chen.Helpers.GeneralHelpers.AssetsManager').[AssetsManager.BundleInfo](./Chen-Helpers-GeneralHelpers-AssetsManager-BundleInfo 'Chen.Helpers.GeneralHelpers.AssetsManager.BundleInfo')
 
 ## BundleInfo(string, string, Chen.Helpers.GeneralHelpers.AssetsManager.BundleType) Constructor
-Constructor used to build BundleInfo.  
+Deprecated constructor used to build BundleInfo.  
 ```csharp
 public BundleInfo(string modPrefix, string source, Chen.Helpers.GeneralHelpers.AssetsManager.BundleType type);
 ```

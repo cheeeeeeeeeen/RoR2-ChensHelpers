@@ -5,6 +5,7 @@
 
 ## AssetsManager.BundleInfo.modPrefix Field
 The mod prefix is defined to be the identifier to the bundle for accessing. It should always start with "@".  
+Do not use this as this is already unused.  
 ```csharp
 public string modPrefix;
 ```
