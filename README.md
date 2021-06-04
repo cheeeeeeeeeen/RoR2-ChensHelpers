@@ -17,9 +17,9 @@ The library is **fully documented**.
 
 ## How to use
 
-Just download the package from **[Thunderstore](https://thunderstore.io/package/Chen/ChensHelpers/)** and add the DLL and XML files as project reference. Move the DLL and XML files accordingly first before adding reference.
+Use **[Thunderstore Mod Manager](https://www.overwolf.com/app/Thunderstore-Thunderstore_Mod_Manager)** to install this mod.
 
-Documentation can be found in **[GitHub Pages](https://cheeeeeeeeeen.github.io/RoR2-ChensHelpers/)**.
+If one does not want to use a mod manager, then get the DLL from **[Thunderstore](https://thunderstore.io/package/Chen/ChensHelpers/)**.
 
 ## Notable Features
 - Minion Ownership assignment with synchronization support and queuing system. The helper does it all instead of manually syncing them.
