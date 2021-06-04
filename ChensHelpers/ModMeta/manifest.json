@@ -5,6 +5,6 @@
   "description": "This mod includes helpers that may aid other mod creators. Fully documented, so feel free to check it out.",
   "dependencies": [
     "bbepis-BepInExPack-5.4.9",
-    "tristanmcpherson-R2API-3.0.30"
+    "tristanmcpherson-R2API-3.0.43"
   ]
 }
