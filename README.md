@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/Version-1.0.10-orange)
+![Version](https://img.shields.io/badge/Version-1.0.11-orange)
 ![Build](https://github.com/cheeeeeeeeeen/RoR2-ChensHelpers/workflows/Build/badge.svg)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Support Chen](https://img.shields.io/badge/Support-Chen-ff69b4)](https://ko-fi.com/cheeeeeeeeeen)
@@ -32,6 +32,7 @@ If one does not want to use a mod manager, then get the DLL from **[Thunderstore
 - Extensions to C# Enumerable and native Objects, such as easily converting an array to a List.
 - Quick access to the host player object of the game when catering to multiplayer features.
 - Extension to BepInEx loggers, such as allowing to print an array easily by calling just one method.
+- Easy to implement Generic Content Pack Provider for adding new CharacterBody and CharacteMaster prefabs.
 - ... and many more. Check the [documentation](https://cheeeeeeeeeen.github.io/RoR2-ChensHelpers/).
 
 ## Contact
