@@ -1,20 +1,15 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.LogHelpers.Collections](Chen_Helpers_LogHelpers_Collections 'Chen.Helpers.LogHelpers.Collections').[Extensions](Chen_Helpers_LogHelpers_Collections_Extensions 'Chen.Helpers.LogHelpers.Collections.Extensions')
-
 ## Extensions.InfoArray&lt;T&gt;(Log, T[], Func&lt;T,string&gt;) Method
 Logs an array of values using the Info format. Use code logic to control the format directly.  
 ```csharp
 public static void InfoArray<T>(this Chen.Helpers.LogHelpers.Log logger, T[] data, System.Func<T,string> formatter);
 ```
-
 #### Type parameters
 <a name='Chen_Helpers_LogHelpers_Collections_Extensions_InfoArray_T_(Chen_Helpers_LogHelpers_Log_T___System_Func_T_string_)_T'></a>
 `T`  
 Type of data in the array
   
-
 #### Parameters
 <a name='Chen_Helpers_LogHelpers_Collections_Extensions_InfoArray_T_(Chen_Helpers_LogHelpers_Log_T___System_Func_T_string_)_logger'></a>
 `logger` [Log](Chen_Helpers_LogHelpers_Log 'Chen.Helpers.LogHelpers.Log')  

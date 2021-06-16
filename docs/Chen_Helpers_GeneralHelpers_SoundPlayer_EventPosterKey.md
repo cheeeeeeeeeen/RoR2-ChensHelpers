@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.GeneralHelpers](Chen_Helpers_GeneralHelpers 'Chen.Helpers.GeneralHelpers').[SoundPlayer](Chen_Helpers_GeneralHelpers_SoundPlayer 'Chen.Helpers.GeneralHelpers.SoundPlayer')
-
 ## SoundPlayer.EventPosterKey Struct
 Represents the data structure for a keybind that is responsible for posting WWise sound events.  
 ```csharp

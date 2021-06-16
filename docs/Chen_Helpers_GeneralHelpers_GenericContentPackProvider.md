@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.GeneralHelpers](Chen_Helpers_GeneralHelpers 'Chen.Helpers.GeneralHelpers')
-
 ## GenericContentPackProvider Class
 An Abstract class for easily implementing Content Pack Providers. It is used for adding new CharacterBody and CharacterMaster GameObjects.  
 It is recommended to use R2API for adding other objects like Projectiles, etc.  

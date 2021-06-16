@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers](Chen_Helpers 'Chen.Helpers')
-
 ## HelperPlugin Class
 The mother plugin so that it can be depended on. It does nothing by itself, though.  
 ```csharp

@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.UnityHelpers](Chen_Helpers_UnityHelpers 'Chen.Helpers.UnityHelpers')
-
 ## RoR2Extensions Class
 Extensions related to Components defined by Risk of Rain 2.  
 ```csharp

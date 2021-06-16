@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.GeneralHelpers](Chen_Helpers_GeneralHelpers 'Chen.Helpers.GeneralHelpers')
-
 ## SoundPlayer Class
 A helper class that allows playing sounds easily with just the WWise Event ID and a Keybind.  
 ```csharp

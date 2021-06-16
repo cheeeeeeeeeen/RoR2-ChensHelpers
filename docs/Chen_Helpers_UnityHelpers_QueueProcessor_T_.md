@@ -1,15 +1,11 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.UnityHelpers](Chen_Helpers_UnityHelpers 'Chen.Helpers.UnityHelpers')
-
 ## QueueProcessor&lt;T&gt; Class
 A generic component for implementing a Queue Processor.  
 The Queue Processor attempts to process N items per frame, allowing items to be processed over time and not instantaneously.  
 ```csharp
 public abstract class QueueProcessor<T> : UnityEngine.MonoBehaviour
 ```
-
 #### Type parameters
 <a name='Chen_Helpers_UnityHelpers_QueueProcessor_T__T'></a>
 `T`  

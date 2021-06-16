@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.GeneralHelpers](Chen_Helpers_GeneralHelpers 'Chen.Helpers.GeneralHelpers').[AssetsManager](Chen_Helpers_GeneralHelpers_AssetsManager 'Chen.Helpers.GeneralHelpers.AssetsManager')
-
 ## AssetsManager.BundleInfo Struct
 A data structure that holds the information about the bundle.  
 This is used by the AssetsManager.  

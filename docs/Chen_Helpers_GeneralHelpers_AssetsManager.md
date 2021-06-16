@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.GeneralHelpers](Chen_Helpers_GeneralHelpers 'Chen.Helpers.GeneralHelpers')
-
 ## AssetsManager Class
 A helper class that handles registering bundles for use in a mod.  
 Keep an instance of this class internal or local to the mod.  

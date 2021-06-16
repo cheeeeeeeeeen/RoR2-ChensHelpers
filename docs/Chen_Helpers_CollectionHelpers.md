@@ -1,6 +1,4 @@
-
 #### [ChensHelpers](index 'index')
-
 ## Chen.Helpers.CollectionHelpers Namespace
 
 | Classes | |

@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.MathHelpers](Chen_Helpers_MathHelpers 'Chen.Helpers.MathHelpers')
-
 ## Arithmetic Class
 Extensions related to computations involving numbers.  
 ```csharp

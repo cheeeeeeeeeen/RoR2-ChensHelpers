@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.LogHelpers.Collections](Chen_Helpers_LogHelpers_Collections 'Chen.Helpers.LogHelpers.Collections').[Extensions](Chen_Helpers_LogHelpers_Collections_Extensions 'Chen.Helpers.LogHelpers.Collections.Extensions')
-
 ## Extensions.DebugArray&lt;T&gt;(Log, T[], string, string) Method
 Logs an array of values using the Debug format. Use the format parameter to control how the log entry will be displayed. Leave as is for plain logs.  
 The representation parameter will be the token that will be used to display the data that is specified in the format parameter (default is %DATA%).  
@@ -13,13 +10,11 @@ e.g. DebugArray(new string[] { "Chen", "is", "AWESOME" }, "-> %X%..!", "%X%") wi
 ```csharp
 public static void DebugArray<T>(this Chen.Helpers.LogHelpers.Log logger, T[] data, string format="%DATA%", string representation="%DATA%");
 ```
-
 #### Type parameters
 <a name='Chen_Helpers_LogHelpers_Collections_Extensions_DebugArray_T_(Chen_Helpers_LogHelpers_Log_T___string_string)_T'></a>
 `T`  
 Type of data in the array
   
-
 #### Parameters
 <a name='Chen_Helpers_LogHelpers_Collections_Extensions_DebugArray_T_(Chen_Helpers_LogHelpers_Log_T___string_string)_logger'></a>
 `logger` [Log](Chen_Helpers_LogHelpers_Log 'Chen.Helpers.LogHelpers.Log')  

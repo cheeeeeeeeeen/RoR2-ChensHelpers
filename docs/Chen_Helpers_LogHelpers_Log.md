@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.LogHelpers](Chen_Helpers_LogHelpers 'Chen.Helpers.LogHelpers')
-
 ## Log Class
 Helper class for logging.  
 Its purpose is really to shorten the code when invoking it so that typing it would be fast and short.  

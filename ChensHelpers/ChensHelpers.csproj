@@ -10,18 +10,18 @@
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
     <Optimize>true</Optimize>
-    <DocumentationFile>_docs\ChensHelpers.xml</DocumentationFile>
+    <DocumentationFile>..\docs\ChensHelpers.xml</DocumentationFile>
     <DefaultDocumentationRemoveFileExtensionFromLinks>true</DefaultDocumentationRemoveFileExtensionFromLinks>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <WarningLevel>5</WarningLevel>
-    <DocumentationFile>_docs\ChensHelpers.xml</DocumentationFile>
+    <DocumentationFile>..\docs\ChensHelpers.xml</DocumentationFile>
     <DefaultDocumentationRemoveFileExtensionFromLinks>true</DefaultDocumentationRemoveFileExtensionFromLinks>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="DefaultDocumentation" Version="0.6.12">
+    <PackageReference Include="DefaultDocumentation" Version="0.7.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
     </PackageReference>
@@ -72,6 +72,6 @@
   </Target>
 
   <Target Name="PostBuild" AfterTargets="PostBuildEvent">
-    <Exec Command="mkdir &quot;$(ProjectDir)Build&quot;&#xD;&#xA;cd &quot;$(ProjectDir)Build&quot;&#xD;&#xA;del * /Q&#xD;&#xA;copy &quot;$(TargetPath)&quot; . /Y&#xD;&#xA;if '$(ConfigurationName)' == 'Debug' (&#xD;&#xA;  copy &quot;$(ProjectDir)ModMeta&quot; . /Y&#xD;&#xA;  copy &quot;$(SolutionDir)README.md&quot; . /Y&#xD;&#xA;  copy &quot;$(SolutionDir)LICENSE.txt&quot; . /Y&#xD;&#xA;  copy &quot;$(ProjectDir)_docs\$(TargetName).xml&quot; . /Y&#xD;&#xA;  7z a Build.zip .\* -x!Build.zip -x!old_*&#xD;&#xA;  copy &quot;$(TargetName).xml&quot; &quot;C:\Users\Chen\AppData\Roaming\Thunderstore Mod Manager\DataFolder\RiskOfRain2\profiles\Default\BepInEx\plugins\Chen-ChensHelpers&quot; /Y&#xD;&#xA;  copy &quot;$(TargetFileName)&quot; &quot;C:\Users\Chen\AppData\Roaming\Thunderstore Mod Manager\DataFolder\RiskOfRain2\profiles\Default\BepInEx\plugins\Chen-ChensHelpers&quot; /Y&#xD;&#xA;)" />
+    <Exec Command="mkdir &quot;$(ProjectDir)Build&quot;&#xD;&#xA;cd &quot;$(ProjectDir)Build&quot;&#xD;&#xA;del * /Q&#xD;&#xA;copy &quot;$(TargetPath)&quot; . /Y&#xD;&#xA;if '$(ConfigurationName)' == 'Debug' (&#xD;&#xA;  copy &quot;$(ProjectDir)ModMeta&quot; . /Y&#xD;&#xA;  copy &quot;$(SolutionDir)README.md&quot; . /Y&#xD;&#xA;  copy &quot;$(SolutionDir)LICENSE.txt&quot; . /Y&#xD;&#xA;  copy &quot;$(SolutionDir)docs\$(TargetName).xml&quot; . /Y&#xD;&#xA;  7z a Build.zip .\* -x!Build.zip -x!old_*&#xD;&#xA;  copy &quot;$(TargetName).xml&quot; &quot;C:\Users\Chen\AppData\Roaming\Thunderstore Mod Manager\DataFolder\RiskOfRain2\profiles\Default\BepInEx\plugins\Chen-ChensHelpers&quot; /Y&#xD;&#xA;  copy &quot;$(TargetFileName)&quot; &quot;C:\Users\Chen\AppData\Roaming\Thunderstore Mod Manager\DataFolder\RiskOfRain2\profiles\Default\BepInEx\plugins\Chen-ChensHelpers&quot; /Y&#xD;&#xA;)" />
   </Target>
 </Project>

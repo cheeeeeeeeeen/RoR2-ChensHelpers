@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.GeneralHelpers](Chen_Helpers_GeneralHelpers 'Chen.Helpers.GeneralHelpers')
-
 ## Instances Class
 Helper static class that allows the fetching of an instance without the need to write long codes.  
 Checks are done by this helper and should output a debug log in the console.  

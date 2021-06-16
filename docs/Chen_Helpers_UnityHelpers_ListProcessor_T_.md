@@ -1,15 +1,11 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.UnityHelpers](Chen_Helpers_UnityHelpers 'Chen.Helpers.UnityHelpers')
-
 ## ListProcessor&lt;T&gt; Class
 A generic component for implementing a List Processor.  
 The List Processor will attempt to process all the items in the data structure in a single frame.  
 ```csharp
 public abstract class ListProcessor<T> : UnityEngine.MonoBehaviour
 ```
-
 #### Type parameters
 <a name='Chen_Helpers_UnityHelpers_ListProcessor_T__T'></a>
 `T`  

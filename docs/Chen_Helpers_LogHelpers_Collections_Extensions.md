@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.LogHelpers.Collections](Chen_Helpers_LogHelpers_Collections 'Chen.Helpers.LogHelpers.Collections')
-
 ## Extensions Class
 Extensions for Log to allow logging with collections of data with ease.  
 ```csharp

@@ -1,6 +1,4 @@
-
 #### [ChensHelpers](index 'index')
-
 ## Chen.Helpers.LogHelpers Namespace
 
 | Classes | |

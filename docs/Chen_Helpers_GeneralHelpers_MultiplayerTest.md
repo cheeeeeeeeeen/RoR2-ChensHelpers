@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.GeneralHelpers](Chen_Helpers_GeneralHelpers 'Chen.Helpers.GeneralHelpers')
-
 ## MultiplayerTest Class
 A helper that can enable and disable Multiplayer Testing. Be sure to not enable this in Awake of a mod on release.  
 ```csharp

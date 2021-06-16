@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.GeneralHelpers](Chen_Helpers_GeneralHelpers 'Chen.Helpers.GeneralHelpers')
-
 ## DropletGenerator Class
 A helper that allows listening to function keys to generate pickup droplets in-game.  
 Press F3 to generate a random white item (or essence).  

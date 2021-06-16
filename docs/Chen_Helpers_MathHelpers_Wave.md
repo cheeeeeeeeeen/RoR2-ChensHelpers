@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.MathHelpers](Chen_Helpers_MathHelpers 'Chen.Helpers.MathHelpers')
-
 ## Wave Class
 Math helper for easily computing Wave behaviors.  
 ```csharp

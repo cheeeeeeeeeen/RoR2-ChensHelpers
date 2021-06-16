@@ -1,8 +1,5 @@
-
 #### [ChensHelpers](index 'index')
-
 ### [Chen.Helpers.CollectionHelpers](Chen_Helpers_CollectionHelpers 'Chen.Helpers.CollectionHelpers')
-
 ## Extensions Class
 Useful extensions that relate to collection data structures.  
 ```csharp
