@@ -109,21 +109,16 @@ namespace Chen.Helpers.UnityHelpers
         /// Creates a deep copy of components from the source towards another Game Object.
         /// </summary>
         /// <typeparam name="T">A Unity Component</typeparam>
-        /// <param name="gameObject">The target Game Object where components will be copied to</param>
+        /// <param name="targetGameObject">The target Game Object where components will be copied to</param>
         /// <param name="sourceGameObject">Source where the original components derived from</param>
         /// <returns>List of deep copied components</returns>
-        public static List<T> DeepCopyComponentsFrom<T>(this GameObject gameObject, GameObject sourceGameObject) where T : Component
+        public static List<T> DeepCopyComponentsFrom<T>(this GameObject targetGameObject, GameObject sourceGameObject) where T : Component
         {
             List<T> copiedComponents = new List<T>();
             T[] components = sourceGameObject.GetComponents<T>();
             foreach (var component in components)
             {
-                T copy = gameObject.AddComponent<T>();
-                FieldInfo[] fields = typeof(T).GetFields();
-                foreach (var field in fields)
-                {
-                    field.SetValue(copy, field.GetValue(component));
-                }
+                T copy = component.DeepCopy(targetGameObject);
                 copiedComponents.Add(copy);
             }
             return copiedComponents;
@@ -133,12 +128,30 @@ namespace Chen.Helpers.UnityHelpers
         /// Creates a deep copy of components from the source towards the specified Game Object.
         /// </summary>
         /// <typeparam name="T">A Unity Component</typeparam>
-        /// <param name="gameObject">The target Game Object where components will be copied to</param>
+        /// <param name="targetGameObject">The target Game Object where components will be copied to</param>
         /// <param name="sourceGameObject">Source where the original components derived from</param>
         /// <returns>List of deep copied components</returns>
-        public static List<T> DeepCopyComponentsTo<T>(this GameObject sourceGameObject, GameObject gameObject) where T : Component
+        public static List<T> DeepCopyComponentsTo<T>(this GameObject sourceGameObject, GameObject targetGameObject) where T : Component
         {
-            return gameObject.DeepCopyComponentsFrom<T>(sourceGameObject);
+            return targetGameObject.DeepCopyComponentsFrom<T>(sourceGameObject);
+        }
+
+        /// <summary>
+        /// Creates a deep copy of a component and attaches it to the target Game Object.
+        /// </summary>
+        /// <typeparam name="T">A Unity Component</typeparam>
+        /// <param name="originalComponent">The basis of the deep copy</param>
+        /// <param name="targetGameObject">The target Game Object where the deep copy component will be added to</param>
+        /// <returns>The deep copied component</returns>
+        public static T DeepCopy<T>(this T originalComponent, GameObject targetGameObject) where T : Component
+        {
+            T copy = targetGameObject.AddComponent<T>();
+            FieldInfo[] fields = typeof(T).GetFields();
+            foreach (var field in fields)
+            {
+                field.SetValue(copy, field.GetValue(originalComponent));
+            }
+            return copy;
         }
     }
 }
