@@ -1,14 +1,18 @@
 ﻿using RoR2;
+using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
+using static Chen.Helpers.RoR2Helpers.DefaultData;
 using static RoR2.CharacterModel;
+using UnityObject = UnityEngine.Object;
 
-namespace Chen.Helpers.UnityHelpers
+namespace Chen.Helpers.RoR2Helpers
 {
     /// <summary>
     /// Extensions related to Components defined by Risk of Rain 2.
     /// </summary>
-    public static class RoR2Extensions
+    public static class Extensions
     {
         /// <summary>
         /// Builds the renderer information data structure from scratch based on the given GameObject's MeshRenderer components.
@@ -62,8 +66,8 @@ namespace Chen.Helpers.UnityHelpers
             if (modelLocator)
             {
                 Transform node;
-                if (node = originalClonedObject.transform.Find("ModelBase")) Object.Destroy(node.gameObject);
-                if (node = originalClonedObject.transform.Find("Model Base")) Object.Destroy(node.gameObject);
+                if (node = originalClonedObject.transform.Find("ModelBase")) UnityObject.Destroy(node.gameObject);
+                if (node = originalClonedObject.transform.Find("Model Base")) UnityObject.Destroy(node.gameObject);
             }
             else return;
 
@@ -78,6 +82,36 @@ namespace Chen.Helpers.UnityHelpers
             modelTransform.localRotation = Quaternion.identity;
             modelLocator.modelTransform = replacementModel.transform;
             modelLocator.modelBaseTransform = modelBase.transform;
+        }
+
+        /// <summary>
+        /// Replaces all the shaders of the materials in the specified asset bundle.
+        /// The Replacement Dictionary should have keys that should be looked from materials for modification. It should include a prefix to determine which should be modified.
+        /// The respective values for each key will be the replacement.
+        /// </summary>
+        /// <param name="assetBundle">Asset bundle whose materials will be converted</param>
+        /// <param name="replacementDictionary">Dictionary used as reference for replacement</param>
+        /// <param name="shaderPrefix">The prefix of shaders in the bundle the will be replaced</param>
+        public static void ConvertShaders(this AssetBundle assetBundle, Dictionary<string, string> replacementDictionary, string shaderPrefix)
+        {
+            bool materialFilter(Material material) => material.shader.name.ToLower().StartsWith(shaderPrefix.ToLower());
+            IEnumerable<Material> materialAssets = assetBundle.LoadAllAssets<Material>().Where(materialFilter);
+            foreach (Material material in materialAssets)
+            {
+                Shader replacementShader = Resources.Load<Shader>(replacementDictionary[material.shader.name.ToLower()]);
+                if (replacementShader) material.shader = replacementShader;
+            }
+        }
+
+        /// <summary>
+        /// Replaces all the shaders of the materials in the specified asset bundle.
+        /// Uses the prefix "Fake RoR" as a prefix to match materials whose shaders will be replaced.
+        /// It also uses RoR2Helpers.DefaultData.ShaderReplacements dictionary as reference for replacements.
+        /// </summary>
+        /// <param name="assetBundle">Asset bundle whose materials will be converted</param>
+        public static void ConvertShaders(this AssetBundle assetBundle)
+        {
+            assetBundle.ConvertShaders(ShaderReplacements, "Fake RoR");
         }
     }
 }
