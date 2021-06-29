@@ -2,7 +2,6 @@
 using System;
 using System.Reflection;
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 namespace Chen.Helpers.GeneralHelpers
 {
@@ -27,7 +26,7 @@ namespace Chen.Helpers.GeneralHelpers
         /// Invoke this method to start registering the bundle assigned to this manager.
         /// </summary>
         /// <returns>Null, or an AssetBundle object if the BundleType is a UnityAssetBundle.</returns>
-        public Object Register()
+        public AssetBundle Register()
         {
             using (var stream = Assembly.GetCallingAssembly().GetManifestResourceStream(bundleInfo.source))
             {
@@ -56,12 +55,6 @@ namespace Chen.Helpers.GeneralHelpers
         public struct BundleInfo : IEquatable<BundleInfo>
         {
             /// <summary>
-            /// The mod prefix is defined to be the identifier to the bundle for accessing. It should always start with "@".
-            /// Do not use this as this is already unused.
-            /// </summary>
-            public string modPrefix;
-
-            /// <summary>
             /// The source is the resource path as defined by a mod. The bundle must be Embedded as Resource.
             /// </summary>
             public string source;
@@ -72,20 +65,6 @@ namespace Chen.Helpers.GeneralHelpers
             public BundleType type;
 
             /// <summary>
-            /// Deprecated constructor used to build BundleInfo.
-            /// </summary>
-            /// <param name="modPrefix">The prefix used to access the bundle</param>
-            /// <param name="source">The resource path of the bundle</param>
-            /// <param name="type">Type of the bundle</param>
-            [Obsolete("This constructor is deprecated. Please omit the modPrefix argument as it is not needed anymore.")]
-            public BundleInfo(string modPrefix, string source, BundleType type)
-            {
-                this.modPrefix = modPrefix;
-                this.source = source;
-                this.type = type;
-            }
-
-            /// <summary>
             /// Constructor used to build BundleInfo.
             /// </summary>
             /// <param name="source">The resource path of the bundle</param>
@@ -94,7 +73,6 @@ namespace Chen.Helpers.GeneralHelpers
             {
                 this.source = source;
                 this.type = type;
-                modPrefix = null;
             }
 
             /// <summary>
