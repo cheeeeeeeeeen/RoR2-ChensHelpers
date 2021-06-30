@@ -13,10 +13,11 @@ namespace Chen.Helpers.RoR2Helpers
         /// </summary>
         public static Dictionary<string, string> ShaderReplacements = new Dictionary<string, string>()
         {
-            {"fake ror/hopoo games/deferred/hgstandard", "shaders/deferred/hgstandard"},
-            {"fake ror/hopoo games/fx/hgcloud intersection remap", "shaders/fx/hgintersectioncloudremap" },
-            {"fake ror/hopoo games/fx/hgcloud remap", "shaders/fx/hgcloudremap" },
-            {"fake ror/hopoo games/fx/hgdistortion", "shaders/fx/hgdistortion" }
+            { "fake ror/hopoo games/deferred/hgstandard", "shaders/deferred/hgstandard" },
+            { "fake ror/hopoo games/fx/hgcloud intersection remap", "shaders/fx/hgintersectioncloudremap" },
+            { "fake ror/hopoo games/fx/hgcloud remap", "shaders/fx/hgcloudremap" },
+            { "fake ror/hopoo games/fx/hgdistortion", "shaders/fx/hgdistortion" },
+            { "fake ror/hopoo games/deferred/hgsnow topped", "shaders/deferred/snow topped" }
         };
     }
 }
