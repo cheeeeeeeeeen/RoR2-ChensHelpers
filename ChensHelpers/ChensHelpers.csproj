@@ -21,14 +21,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="GeneralHelpers\_MaterialController.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="GeneralHelpers\_MaterialController.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="DefaultDocumentation" Version="0.7.5">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

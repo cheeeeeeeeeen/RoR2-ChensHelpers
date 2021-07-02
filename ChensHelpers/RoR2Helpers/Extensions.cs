@@ -109,9 +109,6 @@ namespace Chen.Helpers.RoR2Helpers
         /// It also uses RoR2Helpers.DefaultData.ShaderReplacements dictionary as reference for replacements.
         /// </summary>
         /// <param name="assetBundle">Asset bundle whose materials will be converted</param>
-        public static void ConvertShaders(this AssetBundle assetBundle)
-        {
-            assetBundle.ConvertShaders(ShaderReplacements, "Fake RoR");
-        }
+        public static void ConvertShaders(this AssetBundle assetBundle) => assetBundle.ConvertShaders(ShaderReplacements, "Fake RoR");
     }
 }
