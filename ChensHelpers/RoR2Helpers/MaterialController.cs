@@ -21,7 +21,7 @@ namespace Chen.Helpers.RoR2Helpers
                 Material material = null;
                 if (renderer is MeshRenderer meshRendererType)
                 {
-                    material = meshRendererType.material;
+                    material = meshRendererType.sharedMaterial;
                 }
                 else if (renderer is SkinnedMeshRenderer skinnedMeshRenderer)
                 {
