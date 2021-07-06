@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Chen.Helpers.RoR2Helpers
+namespace Chen.Helpers.GeneralHelpers
 {
     /// <summary>
     /// Static class containing the default set of values for some helpers to work, although an option to provide custom data is supported.

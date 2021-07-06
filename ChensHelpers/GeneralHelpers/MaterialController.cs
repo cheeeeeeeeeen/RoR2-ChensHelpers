@@ -2,7 +2,7 @@
 using UnityEngine;
 using static Chen.Helpers.HelperPlugin;
 
-namespace Chen.Helpers.RoR2Helpers
+namespace Chen.Helpers.GeneralHelpers
 {
     /// <summary>
     /// A controller for materials so that properties can be inspected and modified.

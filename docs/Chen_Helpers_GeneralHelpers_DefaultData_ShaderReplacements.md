@@ -1,5 +1,5 @@
 #### [ChensHelpers](index 'index')
-### [Chen.Helpers.RoR2Helpers](Chen_Helpers_RoR2Helpers 'Chen.Helpers.RoR2Helpers').[DefaultData](Chen_Helpers_RoR2Helpers_DefaultData 'Chen.Helpers.RoR2Helpers.DefaultData')
+### [Chen.Helpers.GeneralHelpers](Chen_Helpers_GeneralHelpers 'Chen.Helpers.GeneralHelpers').[DefaultData](Chen_Helpers_GeneralHelpers_DefaultData 'Chen.Helpers.GeneralHelpers.DefaultData')
 ## DefaultData.ShaderReplacements Field
 Default Shader Replacements data. "Fake RoR" is used a prefix for this dictionary.  
 ```csharp

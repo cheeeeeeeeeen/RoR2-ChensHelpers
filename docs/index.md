@@ -8,5 +8,4 @@
 | [Chen.Helpers.LogHelpers](Chen_Helpers_LogHelpers 'Chen.Helpers.LogHelpers') |  |
 | [Chen.Helpers.LogHelpers.Collections](Chen_Helpers_LogHelpers_Collections 'Chen.Helpers.LogHelpers.Collections') |  |
 | [Chen.Helpers.MathHelpers](Chen_Helpers_MathHelpers 'Chen.Helpers.MathHelpers') |  |
-| [Chen.Helpers.RoR2Helpers](Chen_Helpers_RoR2Helpers 'Chen.Helpers.RoR2Helpers') |  |
 | [Chen.Helpers.UnityHelpers](Chen_Helpers_UnityHelpers 'Chen.Helpers.UnityHelpers') |  |

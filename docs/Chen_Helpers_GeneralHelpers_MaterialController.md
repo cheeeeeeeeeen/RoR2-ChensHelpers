@@ -1,5 +1,5 @@
 #### [ChensHelpers](index 'index')
-### [Chen.Helpers.RoR2Helpers](Chen_Helpers_RoR2Helpers 'Chen.Helpers.RoR2Helpers')
+### [Chen.Helpers.GeneralHelpers](Chen_Helpers_GeneralHelpers 'Chen.Helpers.GeneralHelpers')
 ## MaterialController Class
 A controller for materials so that properties can be inspected and modified.  
 Attach this component to a Game Object and let it do its magic.  

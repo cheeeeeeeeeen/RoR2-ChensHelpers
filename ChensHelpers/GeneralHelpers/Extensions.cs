@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 using UnityEngine.Rendering;
-using static Chen.Helpers.RoR2Helpers.DefaultData;
+using static Chen.Helpers.GeneralHelpers.DefaultData;
 using static RoR2.CharacterModel;
 using UnityObject = UnityEngine.Object;
 
-namespace Chen.Helpers.RoR2Helpers
+namespace Chen.Helpers.GeneralHelpers
 {
     /// <summary>
     /// Extensions related to Components defined by Risk of Rain 2.
