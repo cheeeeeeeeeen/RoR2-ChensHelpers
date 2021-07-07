@@ -37,6 +37,8 @@ If one does not want to use a mod manager, then get the DLL from **[Thunderstore
 - Easy to implement Generic Content Pack Provider for adding new CharacterBody and CharacteMaster prefabs.
 - Easily create a deep copy of any component.
 - Quickly replace shaders to map with Risk of Rain 2's shaders.
+- Modified Blast Attack inherited from vanilla so that it returns victims instead of just the number.
+- Various 
 - ... and many more. Check the [documentation](https://cheeeeeeeeeen.github.io/RoR2-ChensHelpers/).
 
 ## Contact
