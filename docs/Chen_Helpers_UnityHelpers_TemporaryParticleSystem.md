@@ -11,6 +11,7 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 | Fields | |
 | :--- | :--- |
 | [detonate](Chen_Helpers_UnityHelpers_TemporaryParticleSystem_detonate 'Chen.Helpers.UnityHelpers.TemporaryParticleSystem.detonate') | A field switch to signal that the Game Object owning the particle system can be destroyed as soon as the Particle System stops emitting.<br/> |
+| [particleSystem](Chen_Helpers_UnityHelpers_TemporaryParticleSystem_particleSystem 'Chen.Helpers.UnityHelpers.TemporaryParticleSystem.particleSystem') | The Particle System partnered with this component.<br/> |
 
 | Methods | |
 | :--- | :--- |
