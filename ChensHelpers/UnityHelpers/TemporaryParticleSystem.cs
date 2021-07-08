@@ -12,7 +12,10 @@ namespace Chen.Helpers.UnityHelpers
         /// </summary>
         public bool detonate;
 
-        private ParticleSystem particleSystem;
+        /// <summary>
+        /// The Particle System partnered with this component.
+        /// </summary>
+        public ParticleSystem particleSystem;
 
         /// <summary>
         /// Overrideable Awake method.
