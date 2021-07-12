@@ -60,7 +60,8 @@ namespace Chen.Helpers.GeneralHelpers
         /// </summary>
         /// <param name="originalClonedObject">The whole original cloned object</param>
         /// <param name="replacementModel">The replacement model loaded from an asset bundle</param>
-        public static void ReplaceModel(this GameObject originalClonedObject, GameObject replacementModel)
+        /// <param name="debug">Set to true to attach the Material Controller for modifying materials in-game.</param>
+        public static void ReplaceModel(this GameObject originalClonedObject, GameObject replacementModel, bool debug = false)
         {
             ModelLocator modelLocator = originalClonedObject.GetComponent<ModelLocator>();
             if (modelLocator)
@@ -82,6 +83,7 @@ namespace Chen.Helpers.GeneralHelpers
             modelTransform.localRotation = Quaternion.identity;
             modelLocator.modelTransform = replacementModel.transform;
             modelLocator.modelBaseTransform = modelBase.transform;
+            if (debug) replacementModel.AddComponent<MaterialController>();
         }
 
         /// <summary>
