@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/Version-1.0.14-orange)
+![Version](https://img.shields.io/badge/Version-1.0.15-orange)
 ![Build](https://github.com/cheeeeeeeeeen/RoR2-ChensHelpers/workflows/Build/badge.svg)
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Support Chen](https://img.shields.io/badge/Support-Chen-ff69b4)](https://ko-fi.com/cheeeeeeeeeen)
@@ -39,6 +39,7 @@ If one does not want to use a mod manager, then get the DLL from **[Thunderstore
 - Quickly replace shaders to map with Risk of Rain 2's shaders.
 - Modified Blast Attack inherited from vanilla so that it returns victims instead of just the number.
 - Various components implemented, such as a Temporary Particle System that automatically destroys itself.
+- Attach a Material Controller component easily to edit materials live.
 - ... and many more. Check the [documentation](https://cheeeeeeeeeen.github.io/RoR2-ChensHelpers/).
 
 ## Contact
