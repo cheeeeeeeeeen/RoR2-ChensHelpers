@@ -13,7 +13,7 @@ namespace Chen.Helpers
     [BepInPlugin(ModGuid, ModName, ModVer)]
     [BepInDependency(R2API.R2API.PluginGUID, R2API.R2API.PluginVersion)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
-    [R2APISubmoduleDependency(nameof(ResourcesAPI), nameof(SoundAPI), nameof(NetworkingAPI))]
+    [R2APISubmoduleDependency(nameof(SoundAPI), nameof(NetworkingAPI))]
     public class HelperPlugin : BaseUnityPlugin
     {
         /// <summary>

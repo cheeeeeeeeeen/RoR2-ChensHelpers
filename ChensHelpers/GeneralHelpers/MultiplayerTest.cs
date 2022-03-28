@@ -13,18 +13,18 @@ namespace Chen.Helpers.GeneralHelpers
         private const string defaultEnableMessage = "Multiplayer Testing is enabled! If you see this message, report this as a bug to the mod developer!";
         private const string defaultDisableMessage = "Multiplayer Testing disabled.";
 
-        private static void OnClientConnect(On.RoR2.Networking.GameNetworkManager.orig_OnClientConnect orig, GameNetworkManager self, NetworkConnection conn)
+        private static void OnClientConnect(On.RoR2.Networking.NetworkManagerSystem.orig_OnClientConnect orig, NetworkManagerSystem self, NetworkConnection conn)
         {
         }
 
         private static void Enable()
         {
-            On.RoR2.Networking.GameNetworkManager.OnClientConnect += OnClientConnect;
+            On.RoR2.Networking.NetworkManagerSystem.OnClientConnect += OnClientConnect;
         }
 
         private static void Disable()
         {
-            On.RoR2.Networking.GameNetworkManager.OnClientConnect -= OnClientConnect;
+            On.RoR2.Networking.NetworkManagerSystem.OnClientConnect -= OnClientConnect;
         }
 
         /// <summary>

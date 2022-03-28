@@ -26,7 +26,8 @@ namespace Chen.Helpers.GeneralHelpers
             var i6 = Input.GetKeyDown(KeyCode.F6);
             var i7 = Input.GetKeyDown(KeyCode.F7);
             var i8 = Input.GetKeyDown(KeyCode.F8);
-            if (i3 || i4 || i5 || i6 || i7 || i8)
+            var i9 = Input.GetKeyDown(KeyCode.F9);
+            if (i3 || i4 || i5 || i6 || i7 || i8 || i9)
             {
                 var t = Instances.hostBodyObject.transform;
 
@@ -35,7 +36,8 @@ namespace Chen.Helpers.GeneralHelpers
                 else if (i4) spawnList = Run.instance.availableTier2DropList;
                 else if (i5) spawnList = Run.instance.availableTier3DropList;
                 else if (i6) spawnList = Run.instance.availableEquipmentDropList;
-                else if (i7) spawnList = Run.instance.availableLunarDropList;
+                else if (i7) spawnList = Run.instance.availableLunarItemDropList;
+                else if (i8) spawnList = Run.instance.availableLunarEquipmentDropList;
                 else spawnList = Run.instance.availableBossDropList;
 
                 PickupDropletController.CreatePickupDroplet(
