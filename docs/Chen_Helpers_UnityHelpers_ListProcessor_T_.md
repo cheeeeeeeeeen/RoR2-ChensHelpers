@@ -4,14 +4,14 @@
 A generic component for implementing a List Processor.  
 The List Processor will attempt to process all the items in the data structure in a single frame.  
 ```csharp
-public abstract class ListProcessor<T> : UnityEngine.MonoBehaviour
+public abstract class ListProcessor<T>
 ```
 #### Type parameters
 <a name='Chen_Helpers_UnityHelpers_ListProcessor_T__T'></a>
 `T`  
   
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [UnityEngine.Object](https://docs.microsoft.com/en-us/dotnet/api/UnityEngine.Object 'UnityEngine.Object') &#129106; [UnityEngine.Component](https://docs.microsoft.com/en-us/dotnet/api/UnityEngine.Component 'UnityEngine.Component') &#129106; [UnityEngine.Behaviour](https://docs.microsoft.com/en-us/dotnet/api/UnityEngine.Behaviour 'UnityEngine.Behaviour') &#129106; [UnityEngine.MonoBehaviour](https://docs.microsoft.com/en-us/dotnet/api/UnityEngine.MonoBehaviour 'UnityEngine.MonoBehaviour') &#129106; ListProcessor&lt;T&gt;  
+Inheritance [UnityEngine.MonoBehaviour](https://docs.microsoft.com/en-us/dotnet/api/UnityEngine.MonoBehaviour 'UnityEngine.MonoBehaviour') &#129106; ListProcessor&lt;T&gt;  
 
 | Fields | |
 | :--- | :--- |

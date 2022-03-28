@@ -6,4 +6,4 @@ Array of HitPoint of BlastAttack. Contains all the victims.
 public HitPoint[] hitPoints;
 ```
 #### Field Value
-[RoR2.BlastAttack.HitPoint](https://docs.microsoft.com/en-us/dotnet/api/RoR2.BlastAttack.HitPoint 'RoR2.BlastAttack.HitPoint')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')
+[RoR2.HitPoint](https://docs.microsoft.com/en-us/dotnet/api/RoR2.HitPoint 'RoR2.HitPoint')[[]](https://docs.microsoft.com/en-us/dotnet/api/System.Array 'System.Array')

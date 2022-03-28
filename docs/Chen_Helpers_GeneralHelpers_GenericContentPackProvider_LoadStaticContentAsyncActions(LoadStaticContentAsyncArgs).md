@@ -3,10 +3,10 @@
 ## GenericContentPackProvider.LoadStaticContentAsyncActions(LoadStaticContentAsyncArgs) Method
 The actions where new content can be added.  
 ```csharp
-protected abstract void LoadStaticContentAsyncActions(RoR2.ContentManagement.LoadStaticContentAsyncArgs args);
+protected abstract void LoadStaticContentAsyncActions(LoadStaticContentAsyncArgs args);
 ```
 #### Parameters
-<a name='Chen_Helpers_GeneralHelpers_GenericContentPackProvider_LoadStaticContentAsyncActions(RoR2_ContentManagement_LoadStaticContentAsyncArgs)_args'></a>
+<a name='Chen_Helpers_GeneralHelpers_GenericContentPackProvider_LoadStaticContentAsyncActions(LoadStaticContentAsyncArgs)_args'></a>
 `args` [RoR2.ContentManagement.LoadStaticContentAsyncArgs](https://docs.microsoft.com/en-us/dotnet/api/RoR2.ContentManagement.LoadStaticContentAsyncArgs 'RoR2.ContentManagement.LoadStaticContentAsyncArgs')  
 Useful for declaring progress for content additions.
   
