@@ -4,14 +4,14 @@
 A generic component for implementing a Queue Processor.  
 The Queue Processor attempts to process N items per frame, allowing items to be processed over time and not instantaneously.  
 ```csharp
-public abstract class QueueProcessor<T> : UnityEngine.MonoBehaviour
+public abstract class QueueProcessor<T>
 ```
 #### Type parameters
 <a name='Chen_Helpers_UnityHelpers_QueueProcessor_T__T'></a>
 `T`  
   
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [UnityEngine.Object](https://docs.microsoft.com/en-us/dotnet/api/UnityEngine.Object 'UnityEngine.Object') &#129106; [UnityEngine.Component](https://docs.microsoft.com/en-us/dotnet/api/UnityEngine.Component 'UnityEngine.Component') &#129106; [UnityEngine.Behaviour](https://docs.microsoft.com/en-us/dotnet/api/UnityEngine.Behaviour 'UnityEngine.Behaviour') &#129106; [UnityEngine.MonoBehaviour](https://docs.microsoft.com/en-us/dotnet/api/UnityEngine.MonoBehaviour 'UnityEngine.MonoBehaviour') &#129106; QueueProcessor&lt;T&gt;  
+Inheritance [UnityEngine.MonoBehaviour](https://docs.microsoft.com/en-us/dotnet/api/UnityEngine.MonoBehaviour 'UnityEngine.MonoBehaviour') &#129106; QueueProcessor&lt;T&gt;  
 
 | Fields | |
 | :--- | :--- |

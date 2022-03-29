@@ -13,13 +13,13 @@ namespace Chen.Helpers
     [BepInPlugin(ModGuid, ModName, ModVer)]
     [BepInDependency(R2API.R2API.PluginGUID, R2API.R2API.PluginVersion)]
     [NetworkCompatibility(CompatibilityLevel.EveryoneMustHaveMod, VersionStrictness.EveryoneNeedSameModVersion)]
-    [R2APISubmoduleDependency(nameof(ResourcesAPI), nameof(SoundAPI), nameof(NetworkingAPI))]
+    [R2APISubmoduleDependency(nameof(SoundAPI), nameof(NetworkingAPI))]
     public class HelperPlugin : BaseUnityPlugin
     {
         /// <summary>
         /// Mod version of the plugin. Useful for fetching the version dynamically when depending on it.
         /// </summary>
-        public const string ModVer = "1.0.15";
+        public const string ModVer = "1.1.1";
 
         /// <summary>
         /// Mod name of the plugin.

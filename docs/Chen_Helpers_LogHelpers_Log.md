@@ -11,7 +11,7 @@ Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.O
 
 | Constructors | |
 | :--- | :--- |
-| [Log(ManualLogSource)](Chen_Helpers_LogHelpers_Log_Log(BepInEx_Logging_ManualLogSource) 'Chen.Helpers.LogHelpers.Log.Log(BepInEx.Logging.ManualLogSource)') | Constructor for the Log helper. Always assign this to a variable with an internal access modifier to keep it to the calling assembly's scope.<br/> |
+| [Log(ManualLogSource)](Chen_Helpers_LogHelpers_Log_Log(ManualLogSource) 'Chen.Helpers.LogHelpers.Log.Log(ManualLogSource)') | Constructor for the Log helper. Always assign this to a variable with an internal access modifier to keep it to the calling assembly's scope.<br/> |
 
 | Methods | |
 | :--- | :--- |

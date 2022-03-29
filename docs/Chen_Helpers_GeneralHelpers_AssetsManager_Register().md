@@ -3,7 +3,7 @@
 ## AssetsManager.Register() Method
 Invoke this method to start registering the bundle assigned to this manager.  
 ```csharp
-public UnityEngine.AssetBundle Register();
+public AssetBundle Register();
 ```
 #### Returns
 [UnityEngine.AssetBundle](https://docs.microsoft.com/en-us/dotnet/api/UnityEngine.AssetBundle 'UnityEngine.AssetBundle')  

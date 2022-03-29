@@ -8,7 +8,7 @@ public struct SoundPlayer.EventPosterKey
 
 | Constructors | |
 | :--- | :--- |
-| [EventPosterKey(KeyCode, uint[])](Chen_Helpers_GeneralHelpers_SoundPlayer_EventPosterKey_EventPosterKey(UnityEngine_KeyCode_uint__) 'Chen.Helpers.GeneralHelpers.SoundPlayer.EventPosterKey.EventPosterKey(UnityEngine.KeyCode, uint[])') | Constructor for building the data for binding keys with assigned Event IDs.<br/>There may be duplicate Event IDs that can exist in one keybind.<br/> |
+| [EventPosterKey(KeyCode, uint[])](Chen_Helpers_GeneralHelpers_SoundPlayer_EventPosterKey_EventPosterKey(KeyCode_uint__) 'Chen.Helpers.GeneralHelpers.SoundPlayer.EventPosterKey.EventPosterKey(KeyCode, uint[])') | Constructor for building the data for binding keys with assigned Event IDs.<br/>There may be duplicate Event IDs that can exist in one keybind.<br/> |
 
 | Fields | |
 | :--- | :--- |

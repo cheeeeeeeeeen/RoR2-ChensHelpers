@@ -3,7 +3,7 @@
 ## Instances.hostBody Property
 Gets the instance of the host's CharacterBody component.  
 ```csharp
-public static RoR2.CharacterBody hostBody { get; }
+public static CharacterBody hostBody { get; }
 ```
 #### Property Value
 [RoR2.CharacterBody](https://docs.microsoft.com/en-us/dotnet/api/RoR2.CharacterBody 'RoR2.CharacterBody')

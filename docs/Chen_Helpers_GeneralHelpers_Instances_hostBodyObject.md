@@ -3,7 +3,7 @@
 ## Instances.hostBodyObject Property
 Gets the instance of the host's CharacterBody GameObject.  
 ```csharp
-public static UnityEngine.GameObject hostBodyObject { get; }
+public static GameObject hostBodyObject { get; }
 ```
 #### Property Value
 [UnityEngine.GameObject](https://docs.microsoft.com/en-us/dotnet/api/UnityEngine.GameObject 'UnityEngine.GameObject')

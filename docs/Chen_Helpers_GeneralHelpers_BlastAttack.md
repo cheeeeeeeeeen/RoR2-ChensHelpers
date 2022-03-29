@@ -3,10 +3,10 @@
 ## BlastAttack Class
 Improvised BlastAttack from Vanilla RoR2 so that it is more helpful for modding.  
 ```csharp
-public class BlastAttack : RoR2.BlastAttack
+public class BlastAttack
 ```
 
-Inheritance [System.Object](https://docs.microsoft.com/en-us/dotnet/api/System.Object 'System.Object') &#129106; [RoR2.BlastAttack](https://docs.microsoft.com/en-us/dotnet/api/RoR2.BlastAttack 'RoR2.BlastAttack') &#129106; BlastAttack  
+Inheritance [RoR2.BlastAttack](https://docs.microsoft.com/en-us/dotnet/api/RoR2.BlastAttack 'RoR2.BlastAttack') &#129106; BlastAttack  
 
 | Methods | |
 | :--- | :--- |

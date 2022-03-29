@@ -6,4 +6,4 @@ Result struct of BlastAttack. Only contains the count of the array of HitPoint, 
 public Result result;
 ```
 #### Field Value
-[RoR2.BlastAttack.Result](https://docs.microsoft.com/en-us/dotnet/api/RoR2.BlastAttack.Result 'RoR2.BlastAttack.Result')
+[RoR2.Result](https://docs.microsoft.com/en-us/dotnet/api/RoR2.Result 'RoR2.Result')
