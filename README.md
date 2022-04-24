@@ -1,4 +1,4 @@
-![Version](https://img.shields.io/badge/Version-1.1.1-orange)
+![Version](https://img.shields.io/badge/Version-1.1.2-orange)
 [![GitHub issues](https://img.shields.io/github/issues/cheeeeeeeeeen/RoR2-ChensHelpers)](https://github.com/cheeeeeeeeeen/RoR2-ChensHelpers/issues)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/cheeeeeeeeeen/RoR2-ChensHelpers)](https://github.com/cheeeeeeeeeen/RoR2-ChensHelpers/pulls)
 [![Support Chen](https://img.shields.io/badge/Support-Chen-ff69b4)](https://ko-fi.com/cheeeeeeeeeen)
