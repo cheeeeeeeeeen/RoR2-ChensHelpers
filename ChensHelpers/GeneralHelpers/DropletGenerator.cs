@@ -43,7 +43,7 @@ namespace Chen.Helpers.GeneralHelpers
                 PickupDropletController.CreatePickupDroplet(
                     spawnList[Run.instance.spawnRng.RangeInt(0, spawnList.Count)],
                     t.position, new Vector3(0f, -5f, 0f)
-                );
+                ); //I wont change this because im lazy, and pseudopulse already made a patcher for this specific method, so I'll just make that a dependency if its an absolute must
             }
         }
     }

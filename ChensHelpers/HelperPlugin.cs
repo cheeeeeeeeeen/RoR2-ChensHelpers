@@ -19,7 +19,7 @@ namespace Chen.Helpers
         /// <summary>
         /// Mod version of the plugin. Useful for fetching the version dynamically when depending on it.
         /// </summary>
-        public const string ModVer = "1.1.2";
+        public const string ModVer = "1.1.3";
 
         /// <summary>
         /// Mod name of the plugin.
