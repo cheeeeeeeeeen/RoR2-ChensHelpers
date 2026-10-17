@@ -20,7 +20,7 @@ namespace Chen.Helpers.GeneralHelpers
         /// </summary>
         public static void Update()
         {
-            var i3 = Input.GetKeyDown(KeyCode.F3);
+            /*var i3 = Input.GetKeyDown(KeyCode.F3);
             var i4 = Input.GetKeyDown(KeyCode.F4);
             var i5 = Input.GetKeyDown(KeyCode.F5);
             var i6 = Input.GetKeyDown(KeyCode.F6);
@@ -43,8 +43,8 @@ namespace Chen.Helpers.GeneralHelpers
                 PickupDropletController.CreatePickupDroplet(
                     spawnList[Run.instance.spawnRng.RangeInt(0, spawnList.Count)],
                     t.position, new Vector3(0f, -5f, 0f)
-                ); //I wont change this because im lazy, and pseudopulse already made a patcher for this specific method, so I'll just make that a dependency if its an absolute must
-            }
+                ); *///I wont change this because im lazy, and pseudopulse already made a patcher for this specific method, so I'll just make that a dependency if its an absolute must
+            //}
         }
     }
 }
